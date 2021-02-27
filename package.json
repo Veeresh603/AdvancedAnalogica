@@ -1,0 +1,47 @@
+{
+  "name": "startup",
+  "private": false,
+  "description": "A startup template perfect for brochure sites and small businesses",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@fontsource/gothic-a1": "^4.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
+    "framer-motion": "^1.11.1",
+    "gatsby": "^2.29.3",
+    "gatsby-background-image": "^0.8.19",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.27",
+    "gatsby-plugin-sitemap": "^2.4.11",
+    "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-source-filesystem": "^2.3.24",
+    "gatsby-transformer-sharp": "^2.5.13",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.10.0",
+    "react-intersection-observer": "^8.26.2",
+    "react-scroll": "^1.8.1",
+    "styled-components": "^4.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bagseye/startup"
+  },
+  "bugs": {
+    "url": "https://github.com/bagseye/startup/issues"
+  }
+}
