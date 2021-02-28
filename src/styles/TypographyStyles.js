@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components"
-import "@fontsource/gothic-a1"
 
 const TypographyStyles = createGlobalStyle`
 
@@ -13,12 +12,18 @@ const TypographyStyles = createGlobalStyle`
     line-height: 1.4;
   }
 
-  h1,
-  h2 {
-    font-size: 1.5rem;
+  h2{
+    font-size: 18px;
+    font-family:"Roboto";
     font-weight: 400;
-    letter-spacing: -1px;
-    margin: 1rem 0;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-family:"Roboto";
+    font-weight: 600;
+    letter-spacing: 1px;
 
     @media (min-width: 768px) {
       font-size: 1.6rem;

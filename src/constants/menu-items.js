@@ -1,6 +1,6 @@
 import React from "react"
-import { DiGithubBadge } from "react-icons/di"
-import { FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa"
+
 
 export const mainMenuItems = [
   {
@@ -12,8 +12,8 @@ export const mainMenuItems = [
     title: "about",
   },
   {
-    path: "/packages",
-    title: "packages",
+    path: "/course",
+    title: "courses",
   },
   {
     path: "/contact",
@@ -24,28 +24,28 @@ export const mainMenuItems = [
 export const socialMenuItems = [
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness",
+    url: "https://www.linkedin.com/company/analogica-software-dev-pvt-ltd/?viewAsMember=true",
     name: "LinkedIn",
   },
   {
-    icon: <FaTwitter />,
-    url: "https://www.twitter.com",
-    name: "Twitter",
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/analogica.in/",
+    name: "Instagram",
   },
   {
-    icon: <DiGithubBadge />,
-    url: "https://github.com/bagseye",
-    name: "GitHub",
+    icon: <FaTwitter />,
+    url: "https://twitter.com/analogicaXpress",
+    name: "Twitter",
   },
 ]
 
-// export const footerMenuItems = [
-//   {
-//     path: "/privacy",
-//     title: "privacy",
-//   },
-//   {
-//     path: "/cookies",
-//     title: "cookies",
-//   },
-// ]
+export const footerMenuItems = [
+  {
+    path: "/privacy",
+    title: "privacy",
+  },
+  {
+    path: "/cookies",
+    title: "cookies",
+  },
+]

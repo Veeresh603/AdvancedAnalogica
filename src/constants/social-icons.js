@@ -1,15 +1,16 @@
 import React from "react"
-import { FaLinkedinIn, FaGithub } from "react-icons/fa"
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa"
 
 export default [
   {
     icon: <FaLinkedinIn />,
-    url: "https://www.linkedin.com/in/morgan-baker-developer-inverness/",
+    url: "https://www.linkedin.com/company/analogica-software-dev-pvt-ltd/?viewAsMember=true",
     name: "LinkedIn",
   },
   {
-    icon: <FaGithub />,
-    url: "https://github.com/bagseye",
-    name: "GitHub",
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/analogica.in/",
+    name: "Instagram",
   },
+
 ]

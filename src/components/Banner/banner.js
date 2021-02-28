@@ -1,15 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import Button from "../Button/button"
-import { Link } from "react-scroll"
-import { motion } from "framer-motion"
-import { BannerStyles } from "../../styles/bannerStyles"
+import Image from "gatsby-image"
+import styled from "styled-components"
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "flames.jpg" }) {
+      file(relativePath: { eq: "ana.png" }) {
         childImageSharp {
           fluid(maxWidth: 2000, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp
@@ -19,49 +16,37 @@ const Banner = () => {
     }
   `)
 
-  const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 20 },
-  }
 
   return (
-    <BannerStyles>
-      <BackgroundImage
-        Tag="section"
-        className="hero-image"
-        fluid={data.file.childImageSharp.fluid}
-      >
-        <div className="hero-content">
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}
-          >
-            It's time to make your business <span>stand out</span>
-          </motion.h1>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={variants}
-            transition={{ ease: "easeOut", duration: 0.8, delay: 1.5 }}
-          >
-            Startup is here to help you achieve your business and personal
-            goals, all through a stylish theme
-          </motion.p>
-          <Link to="about" smooth={true} duration={500}>
-            <span className="sr-only">Jump to about</span>
-            <Button
-              cta="Learn More"
-              label="Banner Learn More"
-              anchor={true}
-              href="linking"
-            />
-          </Link>
-        </div>
-      </BackgroundImage>
-    </BannerStyles>
+    <>
+     <BannerInnerContainer></BannerInnerContainer>
+     <BannerImage fluid={data.file.childImageSharp.fluid} />
+     <BannerHeading>Your data has a story</BannerHeading>
+     </>
   )
 }
 
 export default Banner
+
+
+
+const BannerInnerContainer =styled.div`
+   margin-top: 30px;
+   width: 100%;
+   height: 268px;
+   background-color: #000000;
+`
+
+const BannerImage = styled(Image)`
+     width: 292px;
+  height: 263px;
+  margin-top: -90px;
+  object-fit: cover;
+  border-radius: 20px;
+`
+
+const BannerHeading = styled.h1`
+     font-size:22px;
+     font-family:"Roboto";
+     font-weight: 500;
+`

@@ -8,14 +8,14 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: "Startup",
-    titleTemplate: "%s | Helping startups get started",
-    description: "A simple one-page site for new businesses that uses GatsbyJS",
-    siteUrl: "https://thestartup.netlify.com",
-    author: "Morgan Baker",
-    authorSite: "https://www.morganbaker.dev",
+    title: "Analogica",
+    titleTemplate: "Analogic Template",
+    description: "Courses",
+    siteUrl: "http://localhost:8000/",
+    author: "Veeresh",
+    authorSite: "",
     image: "/yellow-metal-design-decoration.jpg",
-    twitterUsername: "@twitter",
+    twitterUsername: "",
   },
   plugins: [
     {
@@ -24,7 +24,19 @@ module.exports = {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
       },
+    
     },
+    {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `roboto`,
+         // you can also specify font weights and styles
+      ],
+      display: 'swap'
+    }
+    },
+    
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

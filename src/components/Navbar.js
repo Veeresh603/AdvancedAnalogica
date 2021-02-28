@@ -27,7 +27,7 @@ const Navbar = ({ Logo }) => {
         {links.map((item, index) => {
           return (
             <li key={index}>
-              <a href="#">{item.text}</a>
+              <a href="/">{item.text}</a>
             </li>
           )
         })}
@@ -37,7 +37,6 @@ const Navbar = ({ Logo }) => {
 }
 
 export const NavStyles = styled.nav`
-  position: fixed;
   z-index: 10;
   top: 0;
   width: 100%;
@@ -53,14 +52,14 @@ export const NavStyles = styled.nav`
     justify-content: space-between;
 
     img {
-      width: 90px;
+      width: 140px;
 
       @media (min-width: 768px) {
         width: 100px;
       }
 
       @media (min-width: 1200px) {
-        width: 120px;
+        width: 190px;
       }
     }
   }
@@ -86,13 +85,14 @@ export const NavStyles = styled.nav`
     li {
       list-style: none;
       font-size: 1.25rem;
+      font-family: "Roboto";
       font-weight: 400;
       margin-left: 0;
       padding: 0.75rem 0;
       a {
         text-decoration: none;
         text-transform: capitalize;
-        color: #fff;
+        color: blue;
         transition: 0.3s;
 
         &.active {
