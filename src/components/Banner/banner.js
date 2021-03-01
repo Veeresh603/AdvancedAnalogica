@@ -46,7 +46,6 @@ const BannerImage = styled(Image)`
      width: 292px;
   height: 263px;
   margin-top: -90px;
-  margin-left: -800px;
   object-fit: cover;
   border-radius: 20px;
 `
