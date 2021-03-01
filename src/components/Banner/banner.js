@@ -30,11 +30,16 @@ export default Banner
 
 
 
+
 const BannerInnerContainer =styled.div`
-   margin-top: 30px;
+   margin-top: 60px;
    width: 100%;
    height: 268px;
    background-color: #000000;
+
+   @media (max-width: 991px){
+     height: 268px;
+   }
 `
 
 const BannerImage = styled(Image)`

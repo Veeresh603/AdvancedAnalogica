@@ -29,7 +29,7 @@ export default social
 const Container = styled.div`
    margin-top: 70px;
    width: 100%;
-   height: 306px;
+   height: auto;
    background-color: #000000;
    display: flex;
    flex-direction: column;

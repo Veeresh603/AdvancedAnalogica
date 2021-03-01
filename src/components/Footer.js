@@ -15,6 +15,8 @@ const Footer = ({ Logo }) => {
         site {
           siteMetadata {
             title
+            author
+            authorSite
           }
         }
       }
@@ -35,13 +37,13 @@ const Footer = ({ Logo }) => {
               </Link>
             )}
             <address>
-              3/1 34 th cross 2 block Juganahalli,
-              <br />
-              Rajajinagar, Bengaluru, Karnataka <br />
-              Watton-at-Stone{" "}
+            3/1 34 th cross 2 block Juganahalli,
+                          <br />
+                          Rajajinagar, Bengaluru, Karnataka
+<br />
             </address>
             <a className="telephone" href="tel:+004407076009211">
-              09606698866{" "}
+            09606698866 
             </a>
           </div>
         ) : null}
@@ -87,7 +89,7 @@ const Footer = ({ Logo }) => {
                         rel="noopener noreferrer"
                       >
                         {item.icon}
-                        <span className="sr-only">{item.name}</span>
+                        {/* <span className="sr-only">{item.name}</span> */}
                       </a>
                     </li>
                   )
@@ -102,7 +104,17 @@ const Footer = ({ Logo }) => {
             <li>&copy; {new Date().getFullYear()}</li>
 
             {/* if there is an author stated in the config, render this */}
-         
+            {footerData.author && (
+              <li>
+                <a
+                  href={footerData.authorSite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {footerData.author}
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>

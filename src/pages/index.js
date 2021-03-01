@@ -29,16 +29,28 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   overflow: auto;
-  min-height: 100%;
+  height: auto;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
 
+
   >h1{
     margin-top: 50px;
     border-bottom: 1px solid #ff002b;
+    @media (max-width: 479px){
+      
+      text-align: center;
+       font-size: 17px;
+    }
   }
+  
+  @media (max-width: 991px){
+    flex-wrap: wrap;
+    overflow: hidden;
 
+    
+  }
 `
 
 const DataDrivenImage = styled.img`

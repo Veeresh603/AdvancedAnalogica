@@ -52,7 +52,7 @@ const Container = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 617.3px;
+  height: auto;
 
 
 `
@@ -66,6 +66,13 @@ display: flex;
   height: 617.3px;
   padding-left: 40px;
 
+  @media (max-width: 479px){
+    padding-left: 15px;
+    padding-right: 15px;
+      width: 100%;
+
+    }
+
   >img{
       width: 400px;
       height: 250px;
@@ -75,6 +82,12 @@ display: flex;
       font-size: 19px;
       font-family: "Roboto";
       font-weight: 600;
+
+      @media (max-width: 479px){
+      
+      text-align: center;
+       font-size: 16px;
+    }
   }
   >h4{
       font-size: 16px;

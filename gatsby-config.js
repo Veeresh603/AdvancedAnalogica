@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: "http://localhost:8000/",
     author: "Veeresh",
     authorSite: "",
-    image: "/yellow-metal-design-decoration.jpg",
+    image: "../images/AnalogicaIcon.png",
     twitterUsername: "",
   },
   plugins: [
@@ -23,7 +23,7 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
-      },
+      }
     
     },
     {
@@ -35,7 +35,9 @@ module.exports = {
       ],
       display: 'swap'
     }
-    },
+  },
+   
+  
     
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,

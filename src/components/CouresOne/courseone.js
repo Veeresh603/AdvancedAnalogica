@@ -135,6 +135,10 @@ display: flex;
   width: 354px;
   height: 380px;
     
+  
+    
+   
+
     >img{
         width: 354px;
         height: 220px;
@@ -144,6 +148,7 @@ display: flex;
         text-align: center;
         font-family: "Roboto";
         font-size: 18px;
+        
 
   }   
   >h6{
@@ -163,6 +168,10 @@ display: flex;
 const LinkCourse = styled(Link)`
   border-bottom: 1px solid #000000;
     margin-top: -40px;
+
+    @media (max-width: 479px){
+      margin-top:-60px;
+    }
 
 `
   

@@ -51,8 +51,8 @@ export default datadriven
 const Container = styled.div`
   width: 100%;
   display: flex;
-  height: 346px;
-  flex-wrap: nowrap;
+  height: auto;
+  flex-wrap: wrap;
   margin-top: 20px;
   align-items: center;
   flex-direction: row;
