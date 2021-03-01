@@ -41,17 +41,17 @@ export const NavStyles = styled.nav`
   position: absolute;
   z-index: 10;
   top: 0;
+  display: flex;
   width: 100%;
   left: 0;
   right: 0;
-  display: flex;
   padding: 1rem;
   box-sizing: border-box;
   .masthead {
     z-index: 3;
     width: 100%;
     img {
-      width: 90px;
+      width: 145px !important;
       @media (min-width: 768px) {
         width: 100px;
       }

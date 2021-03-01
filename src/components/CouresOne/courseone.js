@@ -92,15 +92,17 @@ function courseone() {
       };
     return (
         <Container>
-                <Swiper {...params}>
+                <Swiper className="swiper" {...params}>
                     {
                      data.map((d) =>(
+
                         <InnerContainer key={d.id}>
                         <img src={d.img} alt="" />
                         <h3>{d.h3}</h3>
                         <h6>{d.h6}</h6>
                         <LinkCourse to={d.link}>Read More</LinkCourse>
                     </InnerContainer>
+
                      )
                
     )
@@ -123,9 +125,11 @@ width: 100%;
   align-items: center;
   flex-direction: row;
   justify-content: center ;
-
+    
+  
    
 `
+
 const InnerContainer = styled.div`
 display: flex;
   flex-direction: column;
@@ -134,8 +138,10 @@ display: flex;
   flex-wrap: nowrap;
   width: 354px;
   height: 380px;
-    
-  
+  margin: auto;  
+ 
+
+   
     
    
 
@@ -143,6 +149,11 @@ display: flex;
         width: 354px;
         height: 220px;
         object-fit:contain;
+        @media (max-width: 425px){
+          width: 300px;
+          height:200px;
+  
+ }
     }
   >h3{
         text-align: center;

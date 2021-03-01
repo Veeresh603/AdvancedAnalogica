@@ -25,7 +25,7 @@ function details() {
                 </h4>
                 <LinkToThere to="#">Get me there</LinkToThere>
             </InnerContainer>
-            <InnerContainer>
+            <InnerContainer01>
                 <img src={Cyb} alt="" />
                 <h2>Cyber security is the most in-demand skill for 2021-2022.
                      Cyber Attacks have increased by a whooping 400% since 2020 and 
@@ -37,7 +37,7 @@ function details() {
                 informed. We have a page dedicated to Ethical Hacking. 
                 </h4>
                 <LinkToThere to="#">Get me there</LinkToThere>
-            </InnerContainer>
+            </InnerContainer01>
 
         </Container>
     )
@@ -72,6 +72,8 @@ display: flex;
       width: 100%;
 
     }
+   
+
 
   >img{
       width: 400px;
@@ -100,4 +102,51 @@ display: flex;
 `
 const LinkToThere = styled(Link)`
       margin-top: 10px;
+`
+const InnerContainer01 = styled.div`
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 540px;
+  height: 617.3px;
+  padding-left: 40px;
+
+  @media (max-width: 479px){
+    padding-left: 15px;
+    padding-right: 15px;
+      width: 100%;
+
+    }
+    @media (max-width: 425px){
+   
+      margin-top: 90px;
+    }
+    >img{
+      width: 400px;
+      height: 250px;
+
+      
+  }
+  >h2{
+      text-align: center;
+      font-size: 19px;
+      font-family: "Roboto";
+      font-weight: 600;
+
+      @media (max-width: 479px){
+      
+      text-align: center;
+       font-size: 16px;
+    }
+  }
+  >h4{
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+      color: #103E5D;
+      font-family: "Roboto";
+  }
+
 `
