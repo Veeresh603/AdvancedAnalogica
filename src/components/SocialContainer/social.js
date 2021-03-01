@@ -42,6 +42,7 @@ const Container = styled.div`
    }
 `
 const SocialIcons = styled.div`
+color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -52,7 +53,7 @@ const SocialIcons = styled.div`
 `
 const LinkedSocial = styled(Link) `
       height: 80px;
-      
+      color: white;
       .icons{
           width: 40px;
           height: 40px;
