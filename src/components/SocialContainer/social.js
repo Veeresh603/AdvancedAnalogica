@@ -57,4 +57,9 @@ const LinkedSocial = styled(Link) `
           width: 40px;
           height: 40px;
       }
+
+      &:hover{
+          background-color: transparent;
+          border: none;
+      }
 `
