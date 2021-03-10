@@ -90,7 +90,7 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 479px) {
-    width: 100%;
+    width: 80%;
   }
 `
 
@@ -110,7 +110,7 @@ const Section01 = styled.div`
   @media (max-width: 479px) {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
   }
 `
 
@@ -125,7 +125,7 @@ const Section02 = styled.div`
   padding-bottom: 36px;
   @media (max-width: 479px) {
     margin-left: 0px;
-    width: 100%;
+    width: 80%;
   }
   > h4 {
     padding-bottom: 25px;

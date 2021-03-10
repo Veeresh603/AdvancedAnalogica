@@ -95,7 +95,7 @@ const Section01 = styled.div`
   align-items: flex-start;
   /* margin-left: 35px; */
   @media (max-width: 479px) {
-    width:100%;
+    width:80%;
     order: 2;
     padding-left:9px;
   }
@@ -166,7 +166,7 @@ const Section02 = styled.div`
     height: 600px;
   }
   @media (max-width: 479px) {
-    width:111%;
+    width:80%;
     padding:0px;
     padding-bottom: 50px;
     justify-content:center;
