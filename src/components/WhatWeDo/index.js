@@ -23,7 +23,7 @@ export default WhatweDO
 
 const Container = styled.div`
   width: 100%;
-  margin-top: 0px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: row;
