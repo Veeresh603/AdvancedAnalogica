@@ -60,7 +60,7 @@ const Details = () => {
 export default Details
 
 const Wrapper = styled.div`
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +84,10 @@ const Wrapper = styled.div`
     width: 527px;
     height:522.76px;
     flex-direction: column;
-    padding-left:10px;
+    padding-left:25px;
+    @media (max-width: 479px){
+      padding-left:0px;
+       }
   }
   .section_child:hover{
      h2{

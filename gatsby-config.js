@@ -26,6 +26,7 @@ module.exports = {
       }
     
     },
+    
     {
     resolve: `gatsby-plugin-google-fonts`,
     options: {
@@ -36,9 +37,40 @@ module.exports = {
       display: 'swap'
     }
   },
+  `gatsby-plugin-ffmpeg`,
+
+  {
+    resolve: `gatsby-remark-videos`,
+    options: {
+      pipelines: [
+        {
+          name: 'vp9',
+          transcode: chain =>
+            chain
+              .videoCodec('libvpx-vp9')
+              .noAudio()
+              .outputOptions(['-crf 20', '-b:v 0']),
+          maxHeight: 480,
+          maxWidth: 900,
+          fileExtension: 'webm',
+        },
+        {
+          name: 'h264',
+          transcode: chain =>
+            chain
+              .videoCodec('libx264')
+              .noAudio()
+              .videoBitrate('1000k'),
+          maxHeight: 480,
+          maxWidth: 900,
+          fileExtension: 'mp4',
+        },
+      ],
+    }
+  },
+  
    
   
-    
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

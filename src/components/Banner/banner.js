@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import production from "../../images/production.gif"
+import videos from "../../images/video(3).mp4"
 
 //   const data = useStaticQuery(graphql`
 //     query {
@@ -14,26 +14,54 @@ import production from "../../images/production.gif"
 //     }
 
 const Banner = () => {
+  
   return (
-   <BannerContainer>
-      
-   <img src={production} alt="" />     
-   </BannerContainer>
+    <BannerContainer>
+    <div className="section">
+      <div className="section_video">
+      <video className="bg__header" preload='auto'  loop autoPlay muted>
+ <source  src={videos} type="video/mp4" />
+</video>
+   
+      </div>
+      </div>
+    </BannerContainer>
   )
 }
 
 export default Banner
 
-
 const BannerContainer = styled.div`
-     width:100% ;
-     height:600px ;
-     margin-bottom:0px;
-    
- > img{
-   width:100%;
-   height: 500px;
-   object-fit:cover;
- }
-    
+display:flex;
+flex-flow: row;
+justify-content: center;
+align-items: center;
+object-fit:cover;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 300px;
+
+  > img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .section {
+    display:flex;
+flex-flow: row;
+justify-content: center;
+align-items: center;
+object-fit:contain;
+  width: 100%;
+  height: 500px;
+  }
+
+  .bg__header{
+    width:100%;
+    height:100%;
+  }
+  .full{
+    width:100%;
+  }
+
 `

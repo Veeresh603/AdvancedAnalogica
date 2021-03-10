@@ -78,19 +78,30 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 0px;
   padding-bottom: 50px;
+  font-family: var(--family);
+  @media (max-width:479px){
+    margin-top: 0px;
+  }
 `
 const Section = styled.div`
   display: flex;
-  width: 90%;
+  width: 80%;
   height: auto;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 479px) {
-    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  @media (max-width:991px){
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
 `
 
@@ -99,36 +110,58 @@ const Section01 = styled.div`
   width: 50%;
   height: auto;
   flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  
   /* margin-left: -76px; */
 
   .imageContainer {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
   }
   @media (max-width: 479px) {
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    justify-content: center;
+  align-items: center;
+    .imageContainer {
+    width: 400px;
+    height: 400px;
   }
+  }
+  @media (max-width: 991px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  align-items: center;
+   
+
+  }
+ 
 `
 
 const Section02 = styled.div`
   display: flex;
   width: 50%;
   height: auto;
-  padding: 50px;
+  /* padding: 50px; */
   flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   padding-bottom: 36px;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  
   @media (max-width: 479px) {
     margin-left: 0px;
     width: 80%;
+    padding-left:9px;
+
   }
+ 
   > h4 {
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     font-weight: 400 !important;
     font-size: 20px;
     font-family: "Montserrat" !important;
@@ -234,6 +267,7 @@ const Section03 = styled.div`
 
 const LinkTo = styled(Link)`
   margin-top: 5px;
+  width:150px;
   padding: 18px 24px;
   background-color: var(--primaryColor);
   color: #fff;
