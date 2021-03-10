@@ -151,6 +151,7 @@ const ClassRoom = styled.div`
   li {
     list-style: none;
     padding-left: 0px;
+    margin-top:-16px;
   }
   p {
     font-weight: 600;
@@ -179,6 +180,8 @@ const Corporate = styled.div`
   li {
     list-style: none;
     padding-left: 0px;
+    margin-top:-16px;
+
   }
   p {
     font-weight: 600;

@@ -123,6 +123,8 @@ const Section01 = styled.div`
   ul,li{
         list-style: none;
         padding-left:0px;
+        margin-top:-16px;
+
       }
 `
 
