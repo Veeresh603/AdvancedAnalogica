@@ -60,7 +60,7 @@ const Details = () => {
 export default Details
 
 const Wrapper = styled.div`
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
