@@ -51,6 +51,7 @@ export const NavStyles = styled.nav`
     z-index: 3;
     width: 100%;
     img {
+      margin-left: 40px;
       width: 145px !important;
       @media (min-width: 768px) {
         width: 100px;
@@ -87,7 +88,7 @@ export const NavStyles = styled.nav`
         font-family: "Roboto";
         text-decoration: none;
         text-transform: capitalize;
-        color: black;
+        color: white;
         transition: 0.3s;
         &.active {
           color: #e609b5;

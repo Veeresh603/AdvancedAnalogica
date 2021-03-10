@@ -30,7 +30,7 @@ module.exports = {
     resolve: `gatsby-plugin-google-fonts`,
     options: {
       fonts: [
-        `roboto`,
+        `roboto\:300, 400, 700, 800, 900`,
          // you can also specify font weights and styles
       ],
       display: 'swap'
@@ -44,5 +44,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+     `gatsby-transformer-ffmpeg`,
   ],
 }

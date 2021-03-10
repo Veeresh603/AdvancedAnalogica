@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --black: #1f1f1f;
     --charcoal: #3e3e3e;
     --primaryColor: #f441a5;
+    --headerColor: #0511F2;
     --h1: 2rem;
     --h2: 1.8rem;
     --h3: 1.5rem;
@@ -44,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  font-family: "Poppins";
+  font-family: "Roboto";
 
 }
 
