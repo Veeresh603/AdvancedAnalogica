@@ -9,21 +9,21 @@ const Details = () => {
     query {
      imageOne: file(relativePath: { eq: "softwares.jpg" }) {
         childImageSharp {
-          fluid(maxWidth : 1000) {
+          fluid(maxWidth : 1000, maxHeight: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       imageTwo: file(relativePath: { eq: "trainings.jpg" }) {
         childImageSharp {
-          fluid(maxWidth : 1000) {
+          fluid(maxWidth : 1000, maxHeight: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       imageThree: file(relativePath: { eq: "consulting.jpg" }) {
         childImageSharp {
-          fluid(maxWidth : 1000) {
+          fluid(maxWidth : 1000, maxHeight: 1000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -65,45 +65,59 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: auto;
+  height:auto;
 
   .section{
-    width:80%;
+    width:90%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-items: center;
     justify-content: space-evenly;
-       
+    padding-bottom: 100px;
        @media (max-width: 479px){
          flex-wrap: wrap;
        }
   }
   .section_child{
     display: flex;
-    width: 400px;
+    width: 527px;
+    height:522.76px;
     flex-direction: column;
     padding-left:10px;
   }
- 
+  .section_child:hover{
+     h2{
+       background-color: var(--primaryColor);
+     }
+  }
   .text{
     width:100%;
     display: flex;
     flex-direction:row;
-    align-items: flex-end;
+    align-items: center;
     justify-items: flex-end;
     justify-content: flex-end;
     margin-top:-40px;
     z-index:99;
 
     h2{
-      font-size:22px;
-      width: auto;
+      text-align: center;
+      font-size:18px;
+      width: 300px;
       background-color: black;
       color:white;
       padding:10px;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      border-radius: 5px;
       padding-left:30px;
       padding-right:30px;
+      padding-top:20px;
+      padding-bottom: 20px;
+      font-family: var(--family);
+      font-weight : 800 !important;
       @media (max-width: 479px){
         font-size:15px;
        }

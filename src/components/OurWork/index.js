@@ -89,7 +89,7 @@ function courseone() {
   return (
     <Wrapper>
       <Text>
-        <h2>our work</h2>
+        <h2 className="borderLeftRight">our work</h2>
       </Text>
       <div className="section_items">
         <Swiper className="" {...params}>
@@ -132,7 +132,7 @@ function courseone() {
 export default courseone
 
 const Wrapper = styled.div`
-  width: 80%;
+  width: 90%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +167,12 @@ const Wrapper = styled.div`
     align-content: center;
     align-self: center;
   }
+  .section_child_items:hover{
+    cursor:pointer;
+    h4{
+      background-color: var(--primaryColor);
+    }
+  }
   .section_child_items {
     width: auto !important;
     display: flex !important;
@@ -198,32 +204,58 @@ const Wrapper = styled.div`
   }
 
   h4 {
-    font-weight: 800 !important;
-    font-family: "Roboto";
-    font-size: 18px;
+    text-align: center;
+    font-weight: 600 !important;
+    font-size: 14px;
     background-color: black;
+    width:400px;
     color: white;
     padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left:30px;
+      padding-right:30px;
+      padding-top:20px;
+      padding-bottom: 20px;
     margin-top: -25px;
+    font-family: var(--family);
   }
 `
 
 const Text = styled.div`
   display: flex;
   width: 100%;
+  margin-bottom: 25px;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
   align-self: flex-start;
   > h2 {
-    padding-bottom: 25px;
     font-weight: 800 !important;
-    color: #000000;
-    font-family: "Roboto";
+    color: var(--primaryColor);
     font-size: 20px;
+  }
+  .borderLeftRight {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .borderLeftRight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(243, 80%, 62%);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  .borderLeftRight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 `
 

@@ -2,12 +2,13 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 :root {
+    --family: "Montserrat" !important;
     --heavyWeight: 900;
     --transMed: 0.3s;
     --transSlow: 0.5s;
-    --black: #1f1f1f;
+    --black: #111111;
     --charcoal: #3e3e3e;
-    --primaryColor: #f441a5;
+    --primaryColor: #0c62fb;
     --headerColor: #0511F2;
     --h1: 2rem;
     --h2: 1.8rem;
@@ -45,8 +46,8 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body {
-  font-family: "Roboto";
-
+  font-family: "Montserrat" !important;
+   
 }
 
 

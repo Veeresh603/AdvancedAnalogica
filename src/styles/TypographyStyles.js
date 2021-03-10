@@ -10,18 +10,19 @@ const TypographyStyles = createGlobalStyle`
   h6 {
     font-weight: 900;
     line-height: 1.4;
+     font-family:"Montserrat", sans-serif;
   }
 
   h2{
     font-size: 18px;
-    font-family:"Roboto";
+    font-family:"Montserrat", sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
   }
 
   h1 {
     font-size: 22px;
-    font-family:"Roboto";
+    font-family:"Montserrat", sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
 
@@ -37,7 +38,7 @@ const TypographyStyles = createGlobalStyle`
 
   h3 {
     font-size: 1.5rem;
-
+    font-family:"Montserrat", sans-serif;
   
   }
 
@@ -45,7 +46,7 @@ const TypographyStyles = createGlobalStyle`
     font-size: 1rem;
     line-height: 1.45;
     margin: 1rem 0;
-
+    font-family:"Montserrat", sans-serif !important;
     @media (min-width: 768px) {
       font-size: 1.1rem;
     }

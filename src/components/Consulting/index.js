@@ -9,7 +9,7 @@ function Consulting() {
     query {
       file(relativePath: { eq: "books.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth:1000, maxHeight: 1000){
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -25,7 +25,7 @@ function Consulting() {
           </div>
         </Section01>
         <Section02>
-          <h2>consulting</h2>
+          <h2 className="borderLeftRight">consulting</h2>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 `
 const Section = styled.div`
   display: flex;
-  width: 80%;
+  width: 90%;
   height: auto;
   flex-direction: row;
   flex-wrap: wrap;
@@ -84,7 +84,8 @@ const Section01 = styled.div`
   align-items: flex-start;
   /* margin-left: -76px; */
   .imageContainer {
-    width: 400px;
+    width: 600px;
+    height: 600px;
   }
   @media (max-width: 479px) {
     justify-content: center;
@@ -97,7 +98,7 @@ const Section02 = styled.div`
   display: flex;
   width: 50%;
   height: auto;
-
+  padding:50px;
   flex-flow: column wrap;
   /* justify-content: space-evenly; */
   justify-content: space-between;
@@ -109,16 +110,40 @@ const Section02 = styled.div`
   }
   > h4 {
     padding-bottom: 2px;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     font-size: 20px;
-  }
+    color: var(--black);
+      }
 
   > h2 {
-    padding-bottom: 0px;
-    font-weight: 800 !important;
-    color: #000000;
-    font-family: "Roboto";
-    font-size: 20px;
+    font-family: var(--family) ;
+    font-weight: 600;
+    color: var(--primaryColor);
+   
+    font-size: 25px;
+  }
+  .borderLeftRight {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .borderLeftRight::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(243, 80%, 62%);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  .borderLeftRight:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
   ul,
   li {
@@ -128,25 +153,28 @@ const Section02 = styled.div`
 
   }
   h6 {
+    font-family:var(--family);
     font-weight: 900 !important;
     color: #000000;
-    font-family: "Roboto";
     font-size:15px;
   }
 `
 
 const LinkTo = styled(Link)`
- padding: 12px 24px;
-  background-color: #fff;
-  color: #000000;
+  margin-top: 5px;
+  padding: 18px 24px;
+  background-color: var(--primaryColor);
+  color: #fff;
   border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   text-decoration: none;
-  border: 1px solid #000000;
-&:hover {
-  transform: translate3d(0px,-1px,0px);
-  background-color: #fff;
-  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  &:hover {
+    color: var(--primaryColor);
+    transform: translate3d(0px, -1px, 0px);
+    background-color: #fff;
+    border: 1px solid var(--black);
+    box-shadow: none;
 }
 `
