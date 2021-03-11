@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://www.fillmurray.com/525/437.6",
+    img: "https://www.fillmurray.com/525/527",
     h3: "Cloud Security Practitioner",
     h6:
       "Every organization is migrating to the cloud in order to save money, but",
@@ -31,7 +31,7 @@ const data = [
   },
   {
     id: 4,
-    img: "https://www.fillmurray.com/525/437.6",
+    img: "https://www.fillmurray.com/525/527",
     h3: "Ethical Hacking1.0",
     h6:
       "Ethical hacking also known as penetration testing/ cyber security is a practice of",
@@ -47,7 +47,7 @@ const data = [
   },
   {
     id: 6,
-    img: "https://www.fillmurray.com/525/437.6",
+    img: "https://www.fillmurray.com/525/527",
     h3: "Diploma in Cloud Security",
     h6:
       "The course module is divided into two semester covering both practical and theoretical",
@@ -173,6 +173,8 @@ const Wrapper = styled.div`
     cursor:pointer;
     h4{
       background-color: var(--primaryColor);
+       color: white;
+       transition: 1s ease-in-out;
     }
   }
   .section_child_items {
@@ -209,10 +211,11 @@ const Wrapper = styled.div`
     text-align: center;
     font-weight: 600 !important;
     font-size: 14px;
-    background-color: black;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+    background-color: #f8f8f8;
     width:300px;
     height: auto;
-    color: white;
+    color: #111111;
     padding: 10px;
     padding-left:30px;
       padding-right:30px;

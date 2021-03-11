@@ -15,9 +15,10 @@ export default () => (
     <Banner />
     <WhatweDO />
     <Details />
-    <Training />
-    <SoftwareDevelopment />
     <Consulting />
+
+    <SoftwareDevelopment />
+    <Training />
     <OurWork />
     <TechnologyStack />
     <WhoWeAre />
@@ -48,5 +49,3 @@ const Container = styled.div`
     overflow: hidden;
   }
 `
-
-

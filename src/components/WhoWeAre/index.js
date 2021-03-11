@@ -102,6 +102,7 @@ const Wrapper = styled.div`
         }
     }
     .text{
+        margin-top:-30px;
         width:100%;
         height:auto;
 

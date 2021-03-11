@@ -59,7 +59,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: -50px;
   padding-bottom: 50px;
 `
 const Section = styled.div`
@@ -134,6 +134,8 @@ const Section02 = styled.div`
       }
 
   > h2 {
+    width:100%;
+
     font-family: var(--family) ;
     font-weight: 600;
     color: var(--primaryColor);

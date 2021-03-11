@@ -32,6 +32,7 @@ const Navbar = ({ Logo }) => {
             </li>
           )
         })}
+        <LinkedTo to="">Let's Connect</LinkedTo>
       </ul>
     </NavStyles>
   )
@@ -171,6 +172,16 @@ export const NavStyles = styled.nav`
     }
     
   }
+`
+const LinkedTo = styled(Link)`
+   width:130px;
+   background-color: var(--primaryColor);
+   text-align: center;
+   text-decoration: none;
+   align-items:center;
+   margin-left:15px;
+   padding-top:15px;
+   color: white;
 `
 
 export default Navbar

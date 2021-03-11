@@ -34,12 +34,13 @@ const Details = () => {
   return (
          <Wrapper>
             <div className="section">
-              <div className="section_child">
-                    <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+            <div className="section_child">
+                    <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
                     <div className="text">
-                      <h2>Training</h2>
+                      <h2>Consulting</h2>
                     </div>
               </div>
+            
               <div className="section_child">
                     <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
                     <div className="text">
@@ -47,9 +48,9 @@ const Details = () => {
                     </div>
               </div>
               <div className="section_child">
-                    <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+                    <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
                     <div className="text">
-                      <h2>Consulting</h2>
+                      <h2>Training</h2>
                     </div>
               </div>
             </div>
@@ -95,6 +96,8 @@ const Wrapper = styled.div`
   .section_child:hover{
      h2{
        background-color: var(--primaryColor);
+       color: white;
+       transition: 1s ease-in-out;
      }
   }
   
@@ -113,8 +116,9 @@ const Wrapper = styled.div`
       text-align: center;
       font-size:18px;
       width: 300px;
-      background-color: black;
-      color:white;
+      background-color: #f8f8f8;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+      color:#111111;
       padding:10px;
       align-items: center;
       justify-content: center;
