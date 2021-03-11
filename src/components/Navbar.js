@@ -45,13 +45,19 @@ export const NavStyles = styled.nav`
   width: 100%;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding-top:1rem;
+  padding-left: 7rem;
+    padding-right: 7rem;
+
   box-sizing: border-box;
+   @media (max-width:991px){
+     padding-left: 2px;
+   }
   .masthead {
     z-index: 3;
     width: 100%;
     img {
-      margin-left: 40px;
+      margin-left: 0px;
       width: 145px !important;
       @media (min-width: 768px) {
         width: 100px;
@@ -65,9 +71,10 @@ export const NavStyles = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
     position: fixed;
     text-align: center;
-    background: #fff;
+    background: #000000;
     margin: 0;
     height: 50%;
     top: 0;
@@ -85,14 +92,14 @@ export const NavStyles = styled.nav`
       margin-left: 0;
       padding: 0.75rem 0;
       a {
-        font-family: "Roboto";
         text-decoration: none;
-        text-transform: capitalize;
+        text-transform: lowercase;
         color: white;
         transition: 0.3s;
         &.active {
           color: #e609b5;
         }
+       
       }
       &:hover {
         cursor: pointer;
@@ -162,6 +169,7 @@ export const NavStyles = styled.nav`
         margin-left: 1rem;
       }
     }
+    
   }
 `
 
