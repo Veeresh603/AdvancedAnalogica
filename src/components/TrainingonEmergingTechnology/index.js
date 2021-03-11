@@ -110,8 +110,8 @@ const Section01 = styled.div`
   width: 50%;
   height: auto;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   
   /* margin-left: -76px; */
 

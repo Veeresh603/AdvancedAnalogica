@@ -7,7 +7,7 @@ import "swiper/css/swiper.css"
 const data = [
   {
     id: 1,
-    img: "https://www.fillmurray.com/340/360",
+    img: "https://www.fillmurray.com/525/323.84",
     h3: "Web Penetration Application",
     h6:
       "Web applications is the most used digital technology there is and with this",
@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://www.fillmurray.com/340/460",
+    img: "https://www.fillmurray.com/525/437.6",
     h3: "Cloud Security Practitioner",
     h6:
       "Every organization is migrating to the cloud in order to save money, but",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 3,
-    img: "https://www.fillmurray.com/340/360",
+    img: "https://www.fillmurray.com/525/323.84",
     h3: "Android Application Penetration Testing",
     h6:
       "We are always connected to our mobile phones, using lot’s of applications",
@@ -31,7 +31,7 @@ const data = [
   },
   {
     id: 4,
-    img: "https://www.fillmurray.com/340/460",
+    img: "https://www.fillmurray.com/525/437.6",
     h3: "Ethical Hacking1.0",
     h6:
       "Ethical hacking also known as penetration testing/ cyber security is a practice of",
@@ -39,7 +39,7 @@ const data = [
   },
   {
     id: 5,
-    img: "https://www.fillmurray.com/340/360",
+    img: "https://www.fillmurray.com/525/323.84",
     h3: "Diploma in Machine Learning",
     h6:
       "Web applications is the most used digital technology there is and with this",
@@ -47,7 +47,7 @@ const data = [
   },
   {
     id: 6,
-    img: "https://www.fillmurray.com/340/460",
+    img: "https://www.fillmurray.com/525/437.6",
     h3: "Diploma in Cloud Security",
     h6:
       "The course module is divided into two semester covering both practical and theoretical",
@@ -90,6 +90,7 @@ function courseone() {
     <Wrapper>
       <Text>
         <h2 className="borderLeftRight">our work</h2>
+        <h6 className="case_study">case study</h6>
       </Text>
       <div className="section_items">
         <Swiper className="" {...params}>
@@ -108,6 +109,7 @@ function courseone() {
           })}
         </Swiper>
       </div>
+
     </Wrapper>
     // <Wrapper>
     //     <Text>
@@ -208,7 +210,8 @@ const Wrapper = styled.div`
     font-weight: 600 !important;
     font-size: 14px;
     background-color: black;
-    width:400px;
+    width:300px;
+    height: auto;
     color: white;
     padding: 10px;
     padding-left:30px;
@@ -224,7 +227,7 @@ const Text = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 25px;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
@@ -256,6 +259,12 @@ const Text = styled.div`
   .borderLeftRight:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  .case_study{
+    color: var(--primaryColor);
+    font-size:13px;
+    border-bottom: 1px solid var(--black);
+
   }
 `
 

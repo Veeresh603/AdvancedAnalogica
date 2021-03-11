@@ -78,6 +78,9 @@ const Wrapper = styled.div`
        @media (max-width: 479px){
          flex-wrap: wrap;
        }
+       @media (max-width: 991px){
+         flex-wrap: wrap;
+       }
   }
   .section_child{
     display: flex;
@@ -94,6 +97,8 @@ const Wrapper = styled.div`
        background-color: var(--primaryColor);
      }
   }
+  
+  
   .text{
     width:100%;
     display: flex;
