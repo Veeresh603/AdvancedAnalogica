@@ -122,12 +122,10 @@ const Section01 = styled.div`
   @media (max-width: 479px) {
     justify-content: center;
     align-items: center;
-    width: 100%;
-    justify-content: center;
-  align-items: center;
+    width: 80%;
     .imageContainer {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
   }
   @media (max-width: 991px) {
@@ -166,6 +164,9 @@ const Section02 = styled.div`
     font-size: 20px;
     font-family: "Montserrat" !important;
     color: var(--black);
+    @media (max-width:479px){
+      font-size: 15px;
+    }
   }
 
   > h2 {
@@ -174,6 +175,9 @@ const Section02 = styled.div`
     font-family: "Montserrat" !important;
     font-size: 25px;
     color: var(--primaryColor);
+    @media (max-width:479px){
+      font-size: 20px;
+    }
   }
   .borderLeftRight {
     display: inline-block;

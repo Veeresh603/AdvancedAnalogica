@@ -122,6 +122,9 @@ const Section01 = styled.div`
    
     font-size: 25px;
     text-align: left;
+    @media (max-width:479px){
+      font-size: 20px;
+    }
   }
   .borderLeftRight {
     display: inline-block;
@@ -151,7 +154,10 @@ const Section01 = styled.div`
     font-weight: 400 !important;
     font-size: 20px;
     font-family: var(--family);
-    color: var(--black)
+    color: var(--black);
+    @media (max-width:479px){
+      font-size: 15px;
+    }
   }
   h6{
     font-weight:900 !important;
@@ -180,14 +186,12 @@ const Section02 = styled.div`
     height: 500px;
   }
   @media (max-width: 479px) {
-    width:100%;
-    padding:0px;
-    padding-bottom: 50px;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    .imageContainer{
-    width:400px;
-    height: 400px;
+    width: 80%;
+    .imageContainer {
+    width: 350px;
+    height: 350px;
   }
   }
   @media (max-width: 991px) {

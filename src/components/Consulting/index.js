@@ -95,10 +95,10 @@ const Section01 = styled.div`
   @media (max-width: 479px) {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     .imageContainer {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
   }
   @media (max-width: 991px) {
@@ -131,8 +131,11 @@ const Section02 = styled.div`
     font-weight: 400 !important;
     font-size: 20px;
     color: var(--black);
+    @media (max-width:479px){
+      font-size: 15px;
+    }
       }
-
+ 
   > h2 {
     width:100%;
 
@@ -141,6 +144,10 @@ const Section02 = styled.div`
     color: var(--primaryColor);
    
     font-size: 25px;
+    @media (max-width:479px){
+      font-size: 20px;
+      height: auto;
+    }
   }
   .borderLeftRight {
     display: inline-block;

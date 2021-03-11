@@ -74,13 +74,13 @@ const Wrapper = styled.div`
     flex-flow: row nowrap;
     align-items: center;
     justify-items: center;
-    justify-content: space-evenly;
     padding-bottom: 100px;
        @media (max-width: 479px){
          flex-wrap: wrap;
        }
        @media (max-width: 991px){
          flex-wrap: wrap;
+         justify-content: center;
        }
   }
   .section_child{
@@ -90,7 +90,17 @@ const Wrapper = styled.div`
     flex-direction: column;
     padding-left:25px;
     @media (max-width: 479px){
-      padding-left:0px;
+      padding-left: 0px;
+      padding-bottom:20px;
+      margin:0;
+      height:auto;
+       }
+       @media (max-width: 991px){
+      padding-left: 0px;
+      padding-bottom:20px;
+      margin:0;
+      height:auto;
+      
        }
   }
   .section_child:hover{

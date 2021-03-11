@@ -53,6 +53,7 @@ const Wrapper = styled.div`
   align-content: center;
   width: 100%;
   height: auto;
+  box-sizing: border-box;
 
   .section {
     width: 100%;
@@ -63,7 +64,15 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    @media (max-width: 479px){
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height:auto;
+       }
+  
   }
+  
   .section_right {
     width: 20%;
     display: flex;
@@ -78,18 +87,27 @@ const Wrapper = styled.div`
       height: auto;
       object-fit: contain;
     }
+    @media (max-width: 479px){
+      height:500px;
+        }
   }
   .section_middle {
     width: 60%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 714.25px;
     padding: 0 30px;
-
+    @media (max-width: 479px){
+         padding:9px;
+         justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: auto;
+       }
     .heading{
         width:100%;
         display:flex;
@@ -105,7 +123,7 @@ const Wrapper = styled.div`
         margin-top:-30px;
         width:100%;
         height:auto;
-
+      
         h4{
             letter-spacing:0.115em;
             line-height:28px;
@@ -113,6 +131,11 @@ const Wrapper = styled.div`
 
         font-family: var(--family);
         font-weight:500;
+        @media (max-width: 479px){
+          font-size:15px;
+          letter-spacing:0px;
+          line-height:18px;
+        }
         }
        
     }
@@ -122,7 +145,12 @@ const Wrapper = styled.div`
 
         p{
             font-size:15px;
-
+            font-family: var(--family);
+            @media (max-width: 479px){
+          font-size:10px;
+           
+        
+        }
         }
     }
   }
@@ -141,6 +169,9 @@ const Wrapper = styled.div`
       height: auto;
       object-fit: contain;
     }
+    @media (max-width: 479px){
+      height:500px;
+        }
   }
   .button{
     width:100%;

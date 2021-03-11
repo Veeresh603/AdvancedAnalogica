@@ -90,6 +90,11 @@ const InnerConatiner = styled.div`
     font-family:"Maven Pro", sans-serif !important;
     font-weight: 100;
     letter-spacing: 2.5px;
+    @media (max-width: 479px){
+     
+      font-size:18px;
+      letter-spacing: 1.5px;
+        }
   }
 
 `
