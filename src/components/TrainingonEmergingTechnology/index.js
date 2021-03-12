@@ -21,7 +21,7 @@ function Training() {
       <Section>
         <Section01>
           <div className="imageContainer">
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <Img  className="image" fluid={data.file.childImageSharp.fluid} />
           </div>
         </Section01>
         <Section02>
@@ -102,6 +102,9 @@ const Section = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 100%;
+  }
+  .image{
+    border-radius: 5px;
   }
 `
 

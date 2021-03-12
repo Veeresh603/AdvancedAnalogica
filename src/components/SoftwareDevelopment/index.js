@@ -41,7 +41,7 @@ function SoftwareDevelopment() {
 
         <Section02>
           <div className="imageContainer">
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <Img  className="image" fluid={data.file.childImageSharp.fluid} />
 
           </div>
 
@@ -193,6 +193,9 @@ const Section02 = styled.div`
     width: 350px;
     height: 350px;
   }
+  }
+  .image{
+    border-radius: 5px;
   }
   @media (max-width: 991px) {
     justify-content: center;

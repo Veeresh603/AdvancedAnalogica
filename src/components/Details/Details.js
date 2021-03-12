@@ -35,20 +35,20 @@ const Details = () => {
          <Wrapper>
             <div className="section">
             <div className="section_child">
-                    <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+                    <Img className="details_image" fluid={data.imageThree.childImageSharp.fluid} alt="" />
                     <div className="text">
                       <h2>Consulting</h2>
                     </div>
               </div>
             
               <div className="section_child">
-                    <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+                    <Img  className="details_image" fluid={data.imageTwo.childImageSharp.fluid} alt="" />
                     <div className="text">
                       <h2>Software Development</h2>
                     </div>
               </div>
               <div className="section_child">
-                    <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+                    <Img className="details_image" fluid={data.imageOne.childImageSharp.fluid} alt="" />
                     <div className="text">
                       <h2>Training</h2>
                     </div>
@@ -101,6 +101,9 @@ const Wrapper = styled.div`
       margin:0;
       height:auto;
       
+       }
+       .details_image{
+         border-radius: 5px;
        }
   }
   .section_child:hover{

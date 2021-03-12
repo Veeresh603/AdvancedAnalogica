@@ -21,7 +21,7 @@ function Consulting() {
       <Section>
         <Section01>
           <div className="imageContainer">
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <Img className="image" fluid={data.file.childImageSharp.fluid} />
           </div>
         </Section01>
         <Section02>
@@ -92,6 +92,9 @@ const Section01 = styled.div`
     width: 500px;
     height: 500px;
   }
+  .image{
+    border-radius: 5px;
+  }
   @media (max-width: 479px) {
     justify-content: center;
     align-items: center;
@@ -99,6 +102,7 @@ const Section01 = styled.div`
     .imageContainer {
     width: 350px;
     height: 350px;
+    border-radius: 5px;
   }
   }
   @media (max-width: 991px) {
