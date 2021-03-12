@@ -182,6 +182,7 @@ const LinkedTo = styled(Link)`
    margin-left:15px;
    padding-top:15px;
    color: white;
+   border-radius: 5px;
 `
 
 export default Navbar

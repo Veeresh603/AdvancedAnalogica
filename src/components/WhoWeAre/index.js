@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import img01 from "../../images/whoweareright.png"
 import img02 from "../../images/whoweareleft.png"
-import {Link} from "gatsby"
+import { Link } from "gatsby"
 
 function WhoWeAre() {
   return (
@@ -10,7 +10,9 @@ function WhoWeAre() {
       <div className="section">
         <div className="section_right">
           <img className="right_image" src={img01} alt="" />
+          <div className="rectangle_box"></div>
         </div>
+
         <div className="section_middle">
           <div className="heading">
             <h2>who we are</h2>
@@ -30,7 +32,7 @@ function WhoWeAre() {
             </p>
           </div>
           <div className="button">
-              <LinkedTo to="">Get to know us</LinkedTo>
+            <LinkedTo to="">Get to know us</LinkedTo>
           </div>
         </div>
         <div className="section_left">
@@ -64,21 +66,21 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    @media (max-width: 479px){
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height:auto;
-       }
-  
+    @media (max-width: 479px) {
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      height: auto;
+    }
   }
-  
+
   .section_right {
     width: 20%;
+    position:relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
     height: 714.25px;
@@ -87,71 +89,78 @@ const Wrapper = styled.div`
       height: auto;
       object-fit: contain;
     }
-    @media (max-width: 479px){
-      height:500px;
-        }
+    @media (max-width: 479px) {
+      height: 500px;
+    }
+  }
+  .rectangle_box {
+    position:absolute;
+    width: 100%;
+    height: 60%;
+    background-color: #000000;
+    border-radius: 5px;
+    bottom:0;
+    margin-bottom:-170px;
+
   }
   .section_middle {
     width: 60%;
     display: flex;
     flex-direction: column;
-    
+
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 714.25px;
     padding: 0 30px;
-    @media (max-width: 479px){
-         padding:9px;
-         justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    height: auto;
-       }
-    .heading{
-        width:100%;
-        display:flex;
-        align-items:flex-start;
-        align-self: flex-start;
-        h2{
-            font-size:20px;
-            color: var(--primaryColor);
-            font-weight: 600;
-        }
+    @media (max-width: 479px) {
+      padding: 9px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      height: auto;
     }
-    .text{
-        margin-top:-30px;
-        width:100%;
-        height:auto;
-      
-        h4{
-            letter-spacing:0.115em;
-            line-height:28px;
-            font-size:25px;
+    .heading {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      align-self: flex-start;
+      h2 {
+        font-size: 20px;
+        color: var(--primaryColor);
+        font-weight: 600;
+      }
+    }
+    .text {
+      margin-top: -30px;
+      width: 100%;
+      height: auto;
+
+      h4 {
+        letter-spacing: 0.115em;
+        line-height: 28px;
+        font-size: 25px;
 
         font-family: var(--family);
-        font-weight:500;
-        @media (max-width: 479px){
-          font-size:15px;
-          letter-spacing:0px;
-          line-height:18px;
+        font-weight: 500;
+        @media (max-width: 479px) {
+          font-size: 15px;
+          letter-spacing: 0px;
+          line-height: 18px;
         }
-        }
-       
+      }
     }
-    .para{
-        width:100%;
-        height:auto;
+    .para {
+      width: 100%;
+      height: auto;
 
-        p{
-            font-size:15px;
-            font-family: var(--family);
-            @media (max-width: 479px){
-          font-size:10px;
-           
-        
+      p {
+        font-size: 15px;
+        font-family: var(--family);
+        @media (max-width: 479px) {
+          font-size: 10px;
         }
-        }
+      }
     }
   }
 
@@ -169,18 +178,18 @@ const Wrapper = styled.div`
       height: auto;
       object-fit: contain;
     }
-    @media (max-width: 479px){
-      height:500px;
-        }
+    @media (max-width: 479px) {
+      height: 500px;
+    }
   }
-  .button{
-    width:100%;
-    margin-top:25px;
-}
+  .button {
+    width: 100%;
+    margin-top: 25px;
+  }
 `
 
 const LinkedTo = styled(Link)`
- width:150px;
+  width: 150px;
   padding: 18px 24px;
   background-color: var(--primaryColor);
   color: #fff;
@@ -196,5 +205,4 @@ const LinkedTo = styled(Link)`
     border: 1px solid var(--black);
     box-shadow: none;
   }
-  
-  `
+`

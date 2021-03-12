@@ -9,6 +9,7 @@ import Consulting from "../components/Consulting/index"
 import OurWork from "../components/OurWork/index"
 import TechnologyStack from "../components/TechnologyStack/index"
 import WhoWeAre from "../components/WhoWeAre/index"
+import WhatWeAreThinking from "../components/WhatWeAreThinking/index"
 
 export default () => (
   <Container>
@@ -22,6 +23,7 @@ export default () => (
     <OurWork />
     <TechnologyStack />
     <WhoWeAre />
+    <WhatWeAreThinking />
   </Container>
 )
 

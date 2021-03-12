@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import videos from "../../images/video(3).mp4"
+import videos from "../../images/video(4).mp4"
 
 function banner() {
     return (
