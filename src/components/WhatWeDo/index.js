@@ -1,18 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 import {Link} from "gatsby"
+import Fade from 'react-reveal/Fade';
 
 function WhatweDO() {
   return (
     <Container>
       <InnerConatiner>
         <h2 className="borderLeftRight">what we do</h2>
-        <h4>
+        <Fade left>        <h4>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
           cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras
           porta velit integer maecenas. Pellentesque scelerisque at amet tempor
           donec in tincidunt. Vulputate platea semper lacinia aliquam egestas.
         </h4>
+        </Fade>
         <LinkTo className="pushUpBtn" to="#">Learn More</LinkTo>
       </InnerConatiner>
     </Container>
@@ -100,10 +102,11 @@ const InnerConatiner = styled.div`
 `
 const LinkTo = styled(Link)`
   margin-top: 15px;
-  
+  background-color: white;
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
   padding: 18px 24px;
-  background-color: var(--primaryColor);
-  color: #fff;
+  
   border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
@@ -113,9 +116,8 @@ const LinkTo = styled(Link)`
 
   &:hover {
  
-  background-color: white;
-  color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
+    background-color: var(--primaryColor);
+  color: #fff;
 }
    
 `

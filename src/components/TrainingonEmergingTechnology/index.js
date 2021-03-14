@@ -276,8 +276,9 @@ const LinkTo = styled(Link)`
   margin-top: 5px;
   width:150px;
   padding: 18px 24px;
-  background-color: var(--primaryColor);
-  color: #fff;
+  background-color: #fff;
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
   border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease,
     background-color 0.25s ease;
@@ -286,8 +287,9 @@ const LinkTo = styled(Link)`
   &:hover {
     color: var(--primaryColor);
     transform: translate3d(0px, -1px, 0px);
-    background-color: #fff;
-    border: 1px solid var(--black);
+
+     background-color: var(--primaryColor);
+  color: #fff;
     box-shadow: none;
   }
 `

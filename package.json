@@ -45,6 +45,7 @@
     "react-id-swiper": "^3.0.0",
     "react-intersection-observer": "^8.26.2",
     "react-player": "^2.9.0",
+    "react-reveal": "^1.2.2",
     "react-scroll": "^1.8.1",
     "sass": "^1.32.8",
     "styled-components": "^4.4.1",

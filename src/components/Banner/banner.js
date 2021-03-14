@@ -21,17 +21,20 @@ export default banner
 
 const Wrapper = styled.div`
     display: block;
+    position: relative;
     width:100%;
     height:90vh;
+    background-color: rgb(16, 29, 51, 0.8);
     @media (max-width: 479px){
           
         height: 80vh;
     }
 
     .section{
-        position:relative;
+        position:absolute;
         width:100%;
         height:90vh;
+        opacity: 0.7;
         @media (max-width: 479px){
           
           height: 80vh;
