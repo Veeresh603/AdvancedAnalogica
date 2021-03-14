@@ -63,6 +63,10 @@ export const NavStyles = styled.nav`
       @media (min-width: 768px) {
         width: 100px;
       }
+      @media (max-width:991px){
+        margin-left:30px;
+
+      }
       @media (min-width: 1200px) {
         width: 120px;
       }
@@ -179,10 +183,15 @@ const LinkedTo = styled(Link)`
    text-align: center;
    text-decoration: none;
    align-items:center;
+   align-self: center;
+   justify-content: center;
    margin-left:15px;
    padding-top:15px;
+   padding-bottom: 15px;
    color: white;
    border-radius: 5px;
+  
+ 
 `
 
 export default Navbar
