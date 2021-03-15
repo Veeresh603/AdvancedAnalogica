@@ -7,7 +7,7 @@ import "swiper/css/swiper.css"
 const data = [
   {
     id: 1,
-    img: "https://www.fillmurray.com/525/323.84",
+    img: "https://www.fillmurray.com/370/240",
     h3: "Web Penetration Application",
     h6:
       "Web applications is the most used digital technology there is and with this",
@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://www.fillmurray.com/525/527",
+    img: "https://www.fillmurray.com/370/400",
     h3: "Cloud Security Practitioner",
     h6:
       "Every organization is migrating to the cloud in order to save money, but",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 3,
-    img: "https://www.fillmurray.com/525/323.84",
+    img: "https://www.fillmurray.com/370/240",
     h3: "Android Application Penetration Testing",
     h6:
       "We are always connected to our mobile phones, using lot’s of applications",
@@ -31,7 +31,7 @@ const data = [
   },
   {
     id: 4,
-    img: "https://www.fillmurray.com/525/527",
+    img: "https://www.fillmurray.com/370/400",
     h3: "Ethical Hacking1.0",
     h6:
       "Ethical hacking also known as penetration testing/ cyber security is a practice of",
@@ -39,7 +39,7 @@ const data = [
   },
   {
     id: 5,
-    img: "https://www.fillmurray.com/525/323.84",
+    img: "https://www.fillmurray.com/370/240",
     h3: "Diploma in Machine Learning",
     h6:
       "Web applications is the most used digital technology there is and with this",
@@ -47,7 +47,7 @@ const data = [
   },
   {
     id: 6,
-    img: "https://www.fillmurray.com/525/527",
+    img: "https://www.fillmurray.com/370/400",
     h3: "Diploma in Cloud Security",
     h6:
       "The course module is divided into two semester covering both practical and theoretical",
@@ -57,7 +57,7 @@ const data = [
 
 function courseone() {
   const params = {
-    slidesPerView: 1,
+    slidesPerView: 3,
     loop: true,
     speed: 1000,
     spaceBetween: 10,
@@ -144,6 +144,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-self: center;
   padding-top: 80px;
+  margin-top:150px;
 
   /* padding: 100px; */
   padding-bottom: 100px;
@@ -157,6 +158,8 @@ const Wrapper = styled.div`
     align-content: center;
     align-self: center;
     width: 80%;
+    margin-left:10px;
+    margin-right:10pX;
   }
   .section_items {
     width: 100%;

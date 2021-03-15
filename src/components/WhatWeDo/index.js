@@ -11,8 +11,7 @@ function WhatweDO() {
         <Fade left>        <h4>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
           cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras
-          porta velit integer maecenas. Pellentesque scelerisque at amet tempor
-          donec in tincidunt. Vulputate platea semper lacinia aliquam egestas.
+          porta velit integer maecenas. 
         </h4>
         </Fade>
         <LinkTo className="pushUpBtn" to="#">Learn More</LinkTo>
@@ -43,7 +42,7 @@ const InnerConatiner = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   @media (max-width: 479px){
-        width:80%;
+        width:90%;
       
     }
 
@@ -57,8 +56,8 @@ const InnerConatiner = styled.div`
   h2{
     padding-top: 0px;
     color: var(--primaryColor);
-    font-size:20px;
-    font-family:"Maven Pro", sans-serif !important;
+     font-size:25px;
+   
       font-weight: 600;
      transition: 1s ease-in-out;
   }
@@ -88,15 +87,28 @@ const InnerConatiner = styled.div`
   }
   
   h4{
-    font-size:24px;
-    font-family:"Maven Pro", sans-serif !important;
-    font-weight: 100;
-    letter-spacing: 2.5px;
+    font-size:2rem;
+    line-height: 4rem;
+    font-weight: 400;
+    
     @media (max-width: 479px){
      
       font-size:18px;
       letter-spacing: 1.5px;
+      line-height: 25px;
         }
+        @media (max-width: 767px){
+     
+     font-size:18px;
+     letter-spacing: 1.5px;
+     line-height: 25px;
+       }
+       @media (max-width: 991px){
+     
+     font-size:18px;
+     letter-spacing: 1.5px;
+     line-height: 25px;
+       }
   }
 
 `
@@ -112,10 +124,10 @@ const LinkTo = styled(Link)`
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
   text-decoration: none;
   
-  transition: 0.5s ease-in-out;
 
   &:hover {
- 
+    transition-duration: 0.45s;
+    transition-timing-function: cubic-bezier(.165,.84,.44,1);
     background-color: var(--primaryColor);
   color: #fff;
 }

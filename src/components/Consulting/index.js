@@ -9,16 +9,46 @@ function Consulting() {
     query {
       file(relativePath: { eq: "books.jpg" }) {
         childImageSharp {
-          fluid(maxWidth:1000, maxHeight: 1000){
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 1000, quality: 100){
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
+  
   return (
     <Wrapper>
-      <Section>
+
+      <div className="section">
+        <div className="left_section">
+           
+            <Image fluid={data.file.childImageSharp.fluid} />
+            
+        </div>
+        <div className="right_section">
+        <h2 className="borderLeftRight">consulting</h2>
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
+            cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
+            cras porta velit integer maecenas.
+          </h4>
+          <ul>
+            <li>
+              <h6>Artificial Intelligence</h6>
+            </li>
+            <li>
+              <h6>Internet of things</h6>
+            </li>{" "}
+            <li>
+              <h6>Cyber Security & services</h6>
+            </li>
+          </ul>
+          <LinkTo to="#">Learn More</LinkTo>
+        </div>
+      </div>
+      {/* <Section>
         <Section01>
           <div className="imageContainer">
             <Img className="image" fluid={data.file.childImageSharp.fluid} />
@@ -44,7 +74,7 @@ function Consulting() {
           </ul>
           <LinkTo to="#">Learn More</LinkTo>
         </Section02>
-      </Section>
+      </Section> */}
     </Wrapper>
   )
 }
@@ -54,140 +84,140 @@ export default Consulting
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: -50px;
-  padding-bottom: 50px;
-`
-const Section = styled.div`
-  display: flex;
-  width: 80%;
-  height: auto;
+  height: 400px;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  @media (max-width: 479px) {
-    width: 100%;
-  }
-  @media (max-width:991px){
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-`
-
-const Section01 = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  /* margin-left: -76px; */
-  .imageContainer {
-    width: 500px;
-    height: 500px;
-  }
-  .image{
-    border-radius: 5px;
-  }
-  @media (max-width: 479px) {
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    .imageContainer {
-    width: 350px;
-    height: 350px;
-    border-radius: 5px;
-  }
-  }
-  @media (max-width: 991px) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  align-items: center;
-   
-
-  }
-`
-
-const Section02 = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  /* padding:50px; */
-  flex-flow: column wrap;
-  /* justify-content: space-evenly; */
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 0px;
-  @media (max-width: 479px) {
-    margin-left: 0px;
-    width: 80%;
-  }
-  > h4 {
-    padding-bottom: 2px;
-    font-weight: 400 !important;
-    font-size: 20px;
-    color: var(--black);
-    @media (max-width:479px){
-      font-size: 15px;
-    }
-      }
- 
-  > h2 {
-    width:100%;
-
-    font-family: var(--family) ;
-    font-weight: 600;
-    color: var(--primaryColor);
-   
-    font-size: 25px;
-    @media (max-width:479px){
-      font-size: 20px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  @media (max-width: 767px){
+      padding: 0px;
       height: auto;
+      margin-top: -30px;
+
+    }
+  .section{
+    /* background-color: gray; */
+    width:80%;
+    height:auto;
+    display: flex;
+    flex-flow: row wrap;
+    @media (max-width:991px){
+      width:90%;
+    }
+    @media (max-width: 767px){
+      flex-direction: column;
+      height:auto;
     }
   }
-  .borderLeftRight {
-    display: inline-block;
+  .left_section{
     position: relative;
-    cursor: pointer;
+    display: flex;
+    width:50%;
+    height:400px;
+    /* background-color: blue; */
+    flex-shrink:inherit;
+    @media (max-width: 767px){
+      width:90%;
+      height: 100px;
+      justify-content: center;
+      align-self: center;
+    }
   }
-  
-  .borderLeftRight::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: hsl(243, 80%, 62%);
-    transform-origin: bottom right;
-    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  
-  .borderLeftRight:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  ul,
-  li {
-    list-style: none;
-    padding-left: 0px;
-    margin-top:-16px;
+   .right_section{
+    padding: 0 20px;
+    display: flex;
+    width:50%;
+    height:500px;
+    /* background-color: green; */
+    flex-direction: column;
+    @media (max-width: 767px){
+      width: 80%;
+      padding-top: 202px;
+      height:auto;
+      justify-content: center;
+      align-self: center;
+    }
+     h2 {
+     width:100%;
 
+     font-family: var(--family) ;
+     font-weight: 600;
+     color: var(--primaryColor);
+   
+     font-size: 25px;
+     @media (max-width:479px){
+       font-size: 20px;
+       height: auto;
+     }
+   }
+    
+   .borderLeftRight {
+     display: inline-block;
+     position: relative;
+     cursor: pointer;
+   }
+  
+   .borderLeftRight::after {
+     content: '';
+     position: absolute;
+     width: 100%;
+     transform: scaleX(0);
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background-color: hsl(243, 80%, 62%);
+     transform-origin: bottom right;
+     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+   }
+  
+   .borderLeftRight:hover::after {
+     transform: scaleX(1);
+     transform-origin: bottom left;
+   }
+   > h4 {
+     padding-bottom: 2px;
+     font-weight: 400 !important;
+     font-size: 20px;
+     color: var(--black);
+     @media (max-width:991px){
+      font-size: 13px;
+    }
   }
-  h6 {
-    font-family:var(--family);
-    font-weight: 900 !important;
-    color: #000000;
-    font-size:15px;
+  
+  
+   ul,
+   li {
+     list-style: none;
+     padding-left: 0px;
+     margin-top:-16px;
+
+   }
+   h6 {
+     font-family:var(--family);
+     font-weight: 900 !important;
+     color: #000000;
+     font-size:15px;
+   }
+     
+       }
+`
+const Image = styled(Img)`
+     position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* z-index: 1; */
+  height: 490px; // or whatever
+  @media (max-width: 767px){
+      width: 100%;
+      height: 300px;
+    }
+  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
+  & > img {
+    object-fit: contain !important; // or whatever
+    object-position: 0% 0% !important; // or whatever
+    font-family: 'object-fit: cover !important; object-position: 0% 0% !important;' // needed for IE9+ polyfill
   }
 `
 
@@ -198,6 +228,7 @@ const LinkTo = styled(Link)`
     transform: translate3d(0px, -1px, 0px);
     background-color: #fff;
     border: 1px solid var(--primaryColor);
+    width:150px;
 
   border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease,

@@ -18,22 +18,20 @@ function Training() {
   `)
   return (
     <Wrapper>
-      <Section>
-        <Section01>
-          <div className="imageContainer">
-            <Img  className="image" fluid={data.file.childImageSharp.fluid} />
-          </div>
-        </Section01>
-        <Section02>
-          <h2 className="borderLeftRight">training on emerging technology</h2>
+      <div className="section">
+        <div className="left_section">
+          <Image fluid={data.file.childImageSharp.fluid} />
+        </div>
+        <div className="right_section">
+          <h2 className="borderLeftRight">training merging technology</h2>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
             cras porta velit integer maecenas.
           </h4>
-          <Section03>
-            <ClassRoom>
-              <p>Classroom</p>
+          <div className="classRoom_wrapper">
+            <div classaName="classRoom">
+            <p>Classroom</p>
               <ul>
                 <li>
                   <h6>Machine Learning</h6>
@@ -45,9 +43,9 @@ function Training() {
                   <h6>Cyber Security</h6>
                 </li>
               </ul>
-            </ClassRoom>
-            <Corporate>
-              <p>Corporate & online</p>
+            </div>
+            <div className="corporate">
+            <p>Corporate & online</p>
               <ul>
                 <li>
                   <h6>Machine Learning</h6>
@@ -59,11 +57,13 @@ function Training() {
                   <h6>Cyber Security</h6>
                 </li>
               </ul>
-            </Corporate>
-          </Section03>
+            </div>
+          </div>
+
           <LinkTo to="#">Learn More</LinkTo>
-        </Section02>
-      </Section>
+        </div>
+      </div>
+      
     </Wrapper>
   )
 }
@@ -73,223 +73,181 @@ export default Training
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-  padding-bottom: 50px;
-  font-family: var(--family);
-  @media (max-width:479px){
-    margin-top: 0px;
-  }
-`
-const Section = styled.div`
-  display: flex;
-  width: 80%;
-  height: auto;
+  height: 400px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 479px) {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  @media (max-width:991px){
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  .image{
-    border-radius: 5px;
-  }
-`
-
-const Section01 = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  
-  /* margin-left: -76px; */
-
-  .imageContainer {
-    width: 500px;
-    height: 500px;
-  }
-  @media (max-width: 479px) {
-    justify-content: center;
-    align-items: center;
+  margin-top: 150px;
+  padding-bottom: 50px;
+  @media (max-width: 767px){
+      height: auto;
+      margin-top:50px;
+      padding-bottom: 0px;
+    }
+  .section {
+    /* background-color: gray; */
     width: 80%;
-    .imageContainer {
-    width: 350px;
-    height: 350px;
-  }
-  }
-  @media (max-width: 991px) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-  align-items: center;
-   
-
-  }
- 
-`
-
-const Section02 = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  /* padding: 50px; */
-  flex-flow: column wrap;
-  padding-bottom: 36px;
-  justify-content: center;
-  align-content: center;
-  align-self: center;
-  
-  @media (max-width: 479px) {
-    margin-left: 0px;
-    width: 80%;
-    padding-left:9px;
-
-  }
- 
-  > h4 {
-    padding-bottom: 5px;
-    font-weight: 400 !important;
-    font-size: 20px;
-    font-family: "Montserrat" !important;
-    color: var(--black);
-    @media (max-width:479px){
-      font-size: 15px;
+    height: 400px;
+    display: flex;
+    @media (max-width:991px){
+       width: 90%;
+    }
+    @media (max-width: 767px){
+      flex-direction:column;
+      height: auto;
     }
   }
+  .left_section {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 400px;
+    /* background-color: blue; */
+    flex-shrink: inherit;
+  
+    @media (max-width: 767px){
+      width:90%;
+      height: 100px;
+      justify-content: center;
+      align-self: center;
+    }
+  }
+  .right_section {
+    padding: 0 20px;
+    display: flex;
+    width: 50%;
+    height: 400px;
+    /* background-color: green; */
+    flex-direction: column;
+    @media (max-width: 767px){
+      width: 80%;
+      padding-top: 202px;
+      height:auto;
+      justify-content: center;
+      align-self: center;
+    }
+    h2 {
+      width: 100%;
 
-  > h2 {
-    font-weight: 800 !important;
-    color: #000000;
-    font-family: "Montserrat" !important;
-    font-size: 25px;
-    color: var(--primaryColor);
-    @media (max-width:479px){
+      font-family: var(--family);
+      font-weight: 600;
+      color: var(--primaryColor);
+
+      font-size: 25px;
+      @media (max-width:991px){
       font-size: 20px;
     }
-  }
-  .borderLeftRight {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .borderLeftRight::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: hsl(243, 80%, 62%);
-    transform-origin: bottom right;
-    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  
-  .borderLeftRight:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+      @media (max-width: 479px) {
+        font-size: 20px;
+        height: auto;
+      }
+    }
+
+    .borderLeftRight {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .borderLeftRight::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: hsl(243, 80%, 62%);
+      transform-origin: bottom right;
+      transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .borderLeftRight:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    > h4 {
+      padding-bottom: 2px;
+      font-weight: 400 !important;
+      font-size: 20px;
+      color: var(--black);
+      @media (max-width:991px){
+        font-size: 13px;
+    }
+      
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding-left: 0px;
+      margin-top: -16px;
+    }
+    h6 {
+      font-family: var(--family);
+      font-weight: 900 !important;
+      color: #000000;
+      font-size: 15px;
+      @media (max-width: 479px) {
+        font-size: 10px;
+      }
+    }
+    .classRoom_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    p{
+      color: gray;
+      @media (max-width: 479px) {
+        font-size: 10px;
+      }
+    }
   }
 `
-
-const ClassRoom = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  ul,
-  li {
-    list-style: none;
-    padding-left: 0px;
-    margin-top: -16px;
-  }
-  p {
-    font-weight: 600;
-    font-size: 15px;
-    color: #848484;
-    font-family: "Montserrat", sans-serif !important;
-  }
-  h6 {
-    font-weight: 900 !important;
-    color: #000000;
-    font-family: "Roboto";
-    font-size: 15px;
-    font-family: "Montserrat", sans-serif;
-  }
-`
-
-const Corporate = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-left: 70px;
-  @media (max-width: 479px) {
-    margin-left: 0px;
-  }
-
-  ul,
-  li {
-    list-style: none;
-    padding-left: 0px;
-    margin-top: -16px;
-  }
-  p {
-    font-weight: 600;
-    font-size: 15px;
-    color: #848484;
-    font-family: "Montserrat", sans-serif !important;
-  }
-  h6 {
-    font-weight: 900 !important;
-    color: #000000;
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 15px;
-  }
-`
-
-const Section03 = styled.div`
-  display: flex;
+const Image = styled(Img)`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* justify-content: space-around; */
+  /* z-index: 1; */
+  height: 490px; // or whatever
+
+  @media (max-width: 767px){
+    width: 100%;
+      height: 300px;
+    }
+  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
+  & > img {
+    object-fit: contain !important; // or whatever
+    object-position: 0% 0% !important; // or whatever
+    font-family: "object-fit: cover !important; object-position: 0% 0% !important;"; // needed for IE9+ polyfill
+  }
 `
 
 const LinkTo = styled(Link)`
   margin-top: 5px;
-  width:150px;
   padding: 18px 24px;
+  color: var(--primaryColor);
+  transform: translate3d(0px, -1px, 0px);
   background-color: #fff;
-    border: 1px solid var(--primaryColor);
-    color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  width:150px;
+
   border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease,
     background-color 0.25s ease;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   text-decoration: none;
+  @media (max-width: 479px) {
+    margin-top:1px;
+      }
   &:hover {
     color: var(--primaryColor);
     transform: translate3d(0px, -1px, 0px);
 
-     background-color: var(--primaryColor);
-  color: #fff;
+    background-color: var(--primaryColor);
+    color: #fff;
     box-shadow: none;
   }
 `

@@ -69,7 +69,7 @@ const Wrapper = styled.div`
         background-size: 100% 1635px;
         background-repeat: no-repeat;
         @media (max-width: 479px){
-        height: auto;
+        height: 1500px;
         background-size: 100% 1500px;
         flex-wrap:wrap;
 }
@@ -124,6 +124,9 @@ const Wrapper = styled.div`
             color:var(--primaryColor);
             font-size: 20px;
             font-weight: 600;
+            @media (max-width: 479px) {
+              font-size: 20px;
+  }
         }
 
     }
@@ -137,7 +140,7 @@ const Wrapper = styled.div`
         height:auto;
         padding: 0 50px;
         @media (max-width: 479px){
-        padding: 0px;
+           padding: 0px;
       
     }
         @media (max-width: 767px){
@@ -152,16 +155,20 @@ const Wrapper = styled.div`
       color:#111111;
       border-radius: 5px;
       @media (max-width: 479px){
-            width:auto;
+            width:250px;
             height:auto;
+            font-size: 15px;
     }
     @media (max-width: 767px){
             width:400px;
             height:auto;
+           
     }
+    
         }
 
     }
+   
 
    
     .rectangle_box{
@@ -169,15 +176,19 @@ const Wrapper = styled.div`
         height:500px;
         background-color: #000000;
         border-radius: 5px;
-        @media (max-width: 479px){
-            width:90%;
-        height: 300px;
-    }
-    @media (max-width: 767px){
-            width:100%;
-        height: 400px;
-    }
+  
+   
        
+    }
+    .rectangle_box{
+      @media (max-width: 479px) {
+       width:90%;
+       height:200px;
+      }
+       @media (max-width: 767px){
+         height:300px;
+       }
+          
     }
     .text{
             width:100%;
@@ -215,12 +226,18 @@ const Wrapper = styled.div`
         justify-content: center;
         padding:50px;
         @media (max-width: 479px){
-          
+          width:90%;
           padding: 10px;
+          height:auto;
       }
     }
     h4{
         color: #f8f8f8;
+        @media (max-width: 479px){
+           
+           font-weight:400;
+            font-size: 15px;
+    }
     }
     h2{
         color: var(--primaryColor);

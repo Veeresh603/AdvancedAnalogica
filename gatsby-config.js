@@ -26,21 +26,20 @@ module.exports = {
       }
     
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        contentTypes: [`article`, `user`],
-        //If using single types place them in this array.
-        singleTypes: [`home-page`, `contact`],
-        // Possibility to login with a strapi user, when content types are not publically available (optional).
-        loginData: {
-          identifier: "",
-          password: "",
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `https://stormy-sierra-23650.herokuapp.com/`,
+    //     queryLimit: 1000, // Default to 100
+    //     contentTypes: [`ourworks`],
+    //     //If using single types place them in this array.
+    //     // Possibility to login with a strapi user, when content types are not publically available (optional).
+    //     loginData: {
+    //       identifier: "veereshsapo@gmail.com",
+    //       password: "Veeru7737",
+    //     },
+    //   },
+    // },
     
     {
     resolve: `gatsby-plugin-google-fonts`,

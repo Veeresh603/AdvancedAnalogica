@@ -94,6 +94,11 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 479px){
+        flex-wrap: wrap;
+        width:50%;
+    }
   }
 
 .boxes{
@@ -102,9 +107,18 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    @media (max-width: 479px){
+        width:50%;
+        justify-content: center;
+    }
+    
 }
   .small_boxes{
      width:13%;
+     @media (max-width: 479px){
+        width:100%;
+        justify-content: center;
+    }
   }
   .borderLeftRight {
     display: inline-block;

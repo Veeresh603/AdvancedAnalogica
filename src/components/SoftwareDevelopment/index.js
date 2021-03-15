@@ -18,9 +18,10 @@ function SoftwareDevelopment() {
   `)
   return (
     <Wrapper>
-      <Section>
-        <Section01>
-          <h2 className="borderLeftRight">software development</h2>
+      <div className="section">
+      
+        <div className="right_section">
+        <h2 className="borderLeftRight">software development</h2>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
@@ -28,186 +29,175 @@ function SoftwareDevelopment() {
           </h4>
           <ul>
             <li>
-              <h6>Artificial Production</h6>
+              <h6>Artificial Intelligence</h6>
             </li>
             <li>
-              <h6>Web Development</h6>
-
+              <h6>Internet of things</h6>
+            </li>{" "}
+            <li>
+              <h6>Cyber Security & services</h6>
             </li>
           </ul>
           <LinkTo to="#">Learn More</LinkTo>
-
-        </Section01>
-
-        <Section02>
-          <div className="imageContainer">
-            <Img  className="image" fluid={data.file.childImageSharp.fluid} />
-
-          </div>
-
-        </Section02>
-      </Section>
+        </div>
+        <div className="left_section">
+           
+           <Image fluid={data.file.childImageSharp.fluid} />
+           
+       </div>
+      </div>
     </Wrapper>
   )
 }
 
 export default SoftwareDevelopment
 
+
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
-  font-family: var(--family);
-  @media (max-width:479px){
-    margin-top: 0px;
-  }
-  
-  
-`
-
-const Section = styled.div`
-  display: flex;
-  width: 80%;
-  height: auto;
+  height: 400px;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
+  margin-top: 150px;
+  padding-bottom: 50px;
+  @media (max-width: 767px){
+    margin-top: 60px;
 
-  @media (max-width:479px){
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-  @media (max-width:991px){
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
-  
- 
-`
-
-const Section01 = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  /* padding: 50px; */
-  flex-flow: column wrap;
-  padding-bottom: 36px;
-  justify-content: center;
-  align-content: center;
-  align-self: center;
-  /* margin-left: 35px; */
-  @media (max-width: 479px) {
-    width:80%;
-    order: 2;
-    padding-left:9px;
-  }
-  @media (max-width: 991px) {
-   
-    order: 2;
-  }
-  
-  h2 {
-    font-weight: 600 !important;
-    font-family:var(--family);
-    color: var(--primaryColor);
-   
-    font-size: 25px;
-    text-align: left;
-    @media (max-width:479px){
-      font-size: 20px;
+      height:auto;
     }
+  .section {
+    /* background-color: gray; */
+    width: 80%;
+    height: 400px;
+    display: flex;
+    @media (max-width:991px){
+       width: 90%;
+    }
+    @media (max-width: 767px){
+      flex-direction: column;
+      height:auto;
+      width:90%;
+    }
+  
   }
-  .borderLeftRight {
-    display: inline-block;
+  .left_section {
     position: relative;
-    cursor: pointer;
-  }
+    display: flex;
+    width: 50%;
+    height: 400px;
+    /* background-color: blue; */
+    flex-shrink: inherit;
+    @media (max-width: 767px){
+      height:auto;
+      width:90%;
+      align-self: center;
+      justify-content: center;
+      order:1;
+    }
   
-  .borderLeftRight::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: hsl(243, 80%, 62%);
-    transform-origin: bottom right;
-    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   }
-  
-  .borderLeftRight:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  h4{
-    padding-bottom:25px;
-    font-weight: 400 !important;
-    font-size: 20px;
-    font-family: var(--family);
-    color: var(--black);
-    @media (max-width:479px){
+  .right_section {
+    padding: 0 20px;
+    display: flex;
+    width: 50%;
+    height: 400px;
+    /* background-color: green; */
+    flex-direction: column;
+    @media (max-width: 767px){
+      height:auto;
+      width:80%;
+      align-self: center;
+      order: 2;
+    }
+    h2 {
+      width: 100%;
+
+      font-family: var(--family);
+      font-weight: 600;
+      color: var(--primaryColor);
+
+      font-size: 25px;
+      @media (max-width: 479px) {
+        font-size: 20px;
+        height: auto;
+      }
+    }
+
+    .borderLeftRight {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .borderLeftRight::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: hsl(243, 80%, 62%);
+      transform-origin: bottom right;
+      transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .borderLeftRight:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    > h4 {
+      padding-bottom: 2px;
+      font-weight: 400 !important;
+      font-size: 20px;
+      color: var(--black);
+      @media (max-width:991px){
+      font-size: 13px;
+    }
+    }
+
+    ul,
+    li {
+      list-style: none;
+      padding-left: 0px;
+      margin-top: -16px;
+    }
+    h6 {
+      font-family: var(--family);
+      font-weight: 900 !important;
+      color: #000000;
       font-size: 15px;
     }
+    .classRoom_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    p{
+      color: gray;
+    }
   }
-  h6{
-    font-weight:900 !important;
-    color:#000000;
-    font-size : 15px;
-    font-family: "Montserrat" !important;
-  
-  }
-  ul,li{
-        list-style: none;
-        padding-left:0px;
-        margin-top:-16px;
-
-      }
 `
-
-const Section02 = styled.div`
-    display: flex;
-  width: 50%;
-  height: auto;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  .imageContainer{
-    width:500px;
-    height: 500px;
-  }
-  @media (max-width: 479px) {
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    .imageContainer {
-    width: 350px;
-    height: 350px;
-  }
-  }
-  .image{
-    border-radius: 5px;
-  }
-  @media (max-width: 991px) {
-    justify-content: center;
-    align-items: center;
+const Image = styled(Img)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* z-index: 1; */
+  height: 490px; // or whatever
+  @media (max-width: 767px){
     width: 100%;
-    justify-content: center;
-  align-items: center;
-   
-
+      height: 300px;
+    }
+  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
+  & > img {
+    object-fit: contain !important; // or whatever
+    object-position: 0% 0% !important; // or whatever
+    font-family: "object-fit: cover !important; object-position: 0% 0% !important;"; // needed for IE9+ polyfill
   }
 `
-
 
 const LinkTo = styled(Link)`
     margin-top: 5px;
