@@ -130,6 +130,11 @@ const Wrapper = styled.div`
         }
 
     }
+    p{
+      @media (max-width:479px){
+        font-size: 13px;
+      }
+    }
     .middle_section{
         display: flex;
         flex-direction: column;
@@ -154,15 +159,16 @@ const Wrapper = styled.div`
       box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
       color:#111111;
       border-radius: 5px;
-      @media (max-width: 479px){
-            width:250px;
-            height:auto;
-            font-size: 15px;
-    }
+  
     @media (max-width: 767px){
             width:400px;
             height:auto;
            
+    }
+    @media (max-width: 479px){
+            width:300px;
+            height:auto;
+            font-size: 15px;
     }
     
         }

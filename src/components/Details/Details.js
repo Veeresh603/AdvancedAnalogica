@@ -42,13 +42,13 @@ const Details = () => {
               </div>
             
               <div className="section_child01">
-                    <Image  className="details_image02" fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+                    <Image  className="details_image01" fluid={data.imageTwo.childImageSharp.fluid} alt="" />
                     <div className="text">
                       <h2>Software Development</h2>
                     </div>
               </div>
               <div className="section_child01">
-                    <Image className="details_image03" fluid={data.imageOne.childImageSharp.fluid} alt="" />
+                    <Image className="details_image01" fluid={data.imageOne.childImageSharp.fluid} alt="" />
                     <div className="text">
                       <h2>Training</h2>
                     </div>
@@ -75,7 +75,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-items: center;
     padding-bottom: 100px;
-    justify-content: center;
+    justify-content: space-evenly;
        @media (max-width: 479px){
          flex-direction:column;
          flex-wrap: wrap;
@@ -90,6 +90,9 @@ const Wrapper = styled.div`
          justify-content: center;
        }
   }
+  .details_image01{
+    border-radius: 5px;
+  }
   .section_child{
     display: flex;
     width: 400px;
@@ -97,7 +100,6 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding-left: 25px; */
  
        @media (max-width: 991px){
       padding-left: 10px;
@@ -126,7 +128,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 25px;
+    /* padding-left: 25px; */
  
        @media (max-width: 991px){
       padding-left: 10px;
@@ -148,6 +150,13 @@ const Wrapper = styled.div`
        
   }
   .section_child:hover{
+     h2{
+       background-color: var(--primaryColor);
+       color: white;
+       transition: 1s ease-in-out;
+     }
+  }
+  .section_child01:hover{
      h2{
        background-color: var(--primaryColor);
        color: white;

@@ -145,7 +145,11 @@ const Wrapper = styled.div`
   align-self: center;
   padding-top: 80px;
   margin-top:150px;
-
+  @media (max-width: 479px){
+      height: auto;
+      margin-top:90px;
+      padding-top: 0px;
+    }
   /* padding: 100px; */
   padding-bottom: 100px;
 

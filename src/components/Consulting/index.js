@@ -24,7 +24,7 @@ function Consulting() {
       <div className="section">
         <div className="left_section">
            
-            <Image fluid={data.file.childImageSharp.fluid} />
+            <Image style={{borderRadius:"5px"}} fluid={data.file.childImageSharp.fluid} />
             
         </div>
         <div className="right_section">
@@ -88,8 +88,8 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 100px;
+  /* padding-bottom: 50px; */
   @media (max-width: 767px){
       padding: 0px;
       height: auto;

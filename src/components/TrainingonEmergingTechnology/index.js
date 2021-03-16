@@ -20,7 +20,7 @@ function Training() {
     <Wrapper>
       <div className="section">
         <div className="left_section">
-          <Image fluid={data.file.childImageSharp.fluid} />
+          <Image style={{borderRadius:"5px"}} fluid={data.file.childImageSharp.fluid} />
         </div>
         <div className="right_section">
           <h2 className="borderLeftRight">training merging technology</h2>
@@ -78,10 +78,15 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 150px;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   @media (max-width: 767px){
       height: auto;
       margin-top:50px;
+      padding-bottom: 0px;
+    }
+    @media (max-width: 479px){
+      height: auto;
+      margin-top:60px;
       padding-bottom: 0px;
     }
   .section {

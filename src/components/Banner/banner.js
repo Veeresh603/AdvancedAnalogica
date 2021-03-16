@@ -53,7 +53,7 @@ const Wrapper = styled.div`
         width:80%;
         /* background-color: gray; */
         height:300px;
-        z-index: 999;
+        z-index: 1;
         display: flex;
         align-items: center;
         /* justify-content: center; */

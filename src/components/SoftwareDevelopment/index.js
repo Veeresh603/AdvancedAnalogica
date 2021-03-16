@@ -42,7 +42,7 @@ function SoftwareDevelopment() {
         </div>
         <div className="left_section">
            
-           <Image fluid={data.file.childImageSharp.fluid} />
+           <Image style={{borderRadius:"5px"}} fluid={data.file.childImageSharp.fluid} />
            
        </div>
       </div>
@@ -60,8 +60,8 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 150px;
-  padding-bottom: 50px;
+  margin-top: 100px;
+  /* padding-bottom: 50px; */
   @media (max-width: 767px){
     margin-top: 60px;
 
