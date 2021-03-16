@@ -2,7 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import Swiper from "react-id-swiper"
 import "swiper/css/swiper.css"
-
+import Slider from "react-slick";
+ 
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const data = [
   {
@@ -15,7 +19,7 @@ const data = [
   },
   {
     id: 2,
-    img: "https://www.fillmurray.com/370/400",
+    img: "https://www.fillmurray.com/370/350",
     h3: "Cloud Security Practitioner",
     h6:
       "Every organization is migrating to the cloud in order to save money, but",
@@ -31,7 +35,7 @@ const data = [
   },
   {
     id: 4,
-    img: "https://www.fillmurray.com/370/400",
+    img: "https://www.fillmurray.com/370/350",
     h3: "Ethical Hacking1.0",
     h6:
       "Ethical hacking also known as penetration testing/ cyber security is a practice of",
@@ -47,7 +51,7 @@ const data = [
   },
   {
     id: 6,
-    img: "https://www.fillmurray.com/370/400",
+    img: "https://www.fillmurray.com/370/350",
     h3: "Diploma in Cloud Security",
     h6:
       "The course module is divided into two semester covering both practical and theoretical",
@@ -56,61 +60,65 @@ const data = [
 ]
 
 function courseone() {
-  const params = {
-    slidesPerView: 3,
-    loop: true,
-    speed: 1000,
-    spaceBetween: 10,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+  var settings = {
 
-    // Responsive breakpoints
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
+    dots: true,
+    infinite: true,
+    autoplay:true,
+    centerPadding: "10px",
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
       },
-      768: {
-        slidesPerView: 2,
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
       },
-      640: {
-        slidesPerView: 2,
-      },
-      320: {
-        slidesPerView: 1,
-      },
-    },
-  }
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+ 
   return (
     <Wrapper>
-      <Text>
-        <h2 className="borderLeftRight">our work</h2>
-        <h6 className="case_study">case study</h6>
-      </Text>
-      <div className="section_items">
-        <Swiper className="" {...params}>
-          {data.map(d => {
-            return(
-              <div className="section_child_items">
-              <div className="section_img">
-                <img src={d.img} alt="" />
-              </div>
-              <div className="section_text">
-                <h4>{d.h3}</h4>
-              </div>
+      <h2 className="borderLeftRight">our work</h2>
+      <Slider {...settings}>
+        {data.map(d => {
+          return(
+            <div className="first">
+            <img src={d.img} alt="" />
+            <div className="text">
+              <h4>{d.h3}</h4>
             </div>
-            )
-           
-          })}
-        </Swiper>
-      </div>
-
+          </div>
+          )
+        })}
+         
+        
+        </Slider>
+   
+  
     </Wrapper>
+    
     // <Wrapper>
     //     <Text>
     //     <h2>our work</h2>
@@ -134,147 +142,80 @@ function courseone() {
 export default courseone
 
 const Wrapper = styled.div`
-  width: 90%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  flex-direction: row;
-  justify-content: center;
-  align-self: center;
-  padding-top: 80px;
-  margin-top:150px;
-  @media (max-width: 479px){
-      height: auto;
-      margin-top:90px;
-      padding-top: 0px;
-    }
-  /* padding: 100px; */
-  padding-bottom: 100px;
-
-  .section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    width: 80%;
-    margin-left:10px;
-    margin-right:10pX;
-  }
-  .section_items {
-    width: 100%;
-    /* padding: 30px; */
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-  }
-  .section_child_items:hover{
-    cursor:pointer;
-    h4{
-      background-color: var(--primaryColor);
+margin-top:200px;
+ width:90%;
+ height:auto;
+  padding: 40px;
+.first{
+  width:370px;
+  height:auto;
+}
+.first:hover{
+     h4{
+       background-color: var(--primaryColor);
        color: white;
        transition: 1s ease-in-out;
-    }
-  }
-  .section_child_items {
-    width: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    margin-right: 15px !important;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-  }
-  .section_img {
-    > img {
-    @media (min-width: 1400px) {
-      width: 450px;
-      height: 450px;
-    }
-  }
-  }
-
-  .section_text {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-  }
-
-  h4 {
-    text-align: center;
-    font-weight: 600 !important;
-    font-size: 14px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
-    background-color: #f8f8f8;
-    width:300px;
-    height: auto;
-    color: #111111;
-    padding: 10px;
-    padding-left:30px;
-      padding-right:30px;
-      padding-top:20px;
-      padding-bottom: 20px;
-    margin-top: -25px;
-    font-family: var(--family);
-  }
-`
-
-const Text = styled.div`
-  display: flex;
+     }
+}
+.text{
   width: 100%;
-  margin-bottom: 25px;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  align-self: flex-start;
-  > h2 {
-    font-weight: 800 !important;
-    color: var(--primaryColor);
-    font-size: 20px;
-  }
-  .borderLeftRight {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .borderLeftRight::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: hsl(243, 80%, 62%);
-    transform-origin: bottom right;
-    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  
-  .borderLeftRight:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  .case_study{
-    color: var(--primaryColor);
-    font-size:13px;
-    border-bottom: 1px solid var(--black);
+  color:white;
+  display: flex;
+  justify-content: flex-end;
+}
+img{
+  width:100%;
+  height:auto;
+}
+h4{
+  width:300px;
+  background-color: #f8f8f8;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+      color:#111111;
+  height:auto;
+  padding:20px;
+  margin-top:-25px; 
+  font-size: 15px;
+}
+h2{
+  color: var(--primaryColor);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom:25px;
+}
+.slick-slide img {
+  margin:auto;
+  align-self: center;
+}
+.slick-slide{
+  margin-left:20px;
+}
+.slick-track{
+  display:flex;
+  align-items:center;
+}
+.borderLeftRight {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
 
-  }
+    .borderLeftRight::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: hsl(243, 80%, 62%);
+      transform-origin: bottom right;
+      transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .borderLeftRight:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
 `
 

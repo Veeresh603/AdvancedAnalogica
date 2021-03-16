@@ -88,7 +88,7 @@ const InnerConatiner = styled.div`
   
   h4{
     font-size:2rem;
-    line-height: 4rem;
+    line-height: 3.5rem;
     font-weight: 400;
     
     @media (max-width: 479px){
