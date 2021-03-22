@@ -123,6 +123,9 @@ const Wrapper = styled.div`
   width: 90%;
   height: auto;
   padding: 40px;
+  display:flex;
+  flex-direction: column;
+  align-self: center;
   @media (max-width:479px){
     margin:0px;
   }
@@ -170,6 +173,7 @@ const Wrapper = styled.div`
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 25px;
+    width:124px;
   }
   .slick-slide img {
     margin: auto;
@@ -187,7 +191,6 @@ const Wrapper = styled.div`
     position: relative;
     cursor: pointer;
   }
-
   .borderLeftRight::after {
     content: "";
     position: absolute;
@@ -200,7 +203,6 @@ const Wrapper = styled.div`
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   }
-
   .borderLeftRight:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;

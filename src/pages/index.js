@@ -12,6 +12,7 @@ import WhoWeAre from "../components/WhoWeAre/index"
 import WhatWeAreThinking from "../components/WhatWeAreThinking/index"
 import LetsTalk from "../components/LetsTalk/index"
 
+
 export default () => (
   <Container>
     <Banner />
@@ -34,7 +35,7 @@ const Container = styled.div`
   display: flex;
   overflow: hidden;
   height: auto;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;

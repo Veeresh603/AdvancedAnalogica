@@ -26,20 +26,20 @@ module.exports = {
       }
     
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `https://stormy-sierra-23650.herokuapp.com/`,
-    //     queryLimit: 1000, // Default to 100
-    //     contentTypes: [`ourworks`],
-    //     //If using single types place them in this array.
-    //     // Possibility to login with a strapi user, when content types are not publically available (optional).
-    //     loginData: {
-    //       identifier: "veereshsapo@gmail.com",
-    //       password: "Veeru7737",
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://anastrapiatlas.herokuapp.com`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`author`, 'course'],
+        //If using single types place them in this array.
+        // Possibility to login with a strapi user, when content types are not publically available (optional).
+        loginData: {
+          identifier: "veereshsapo@gmail.com",
+          password: "Veeru@7737",
+        },
+      },
+    },
     
     {
     resolve: `gatsby-plugin-google-fonts`,
