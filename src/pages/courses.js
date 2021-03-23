@@ -23,7 +23,7 @@ function Artificialintelligence() {
                   <Img className="image" fluid={course.course_image.childImageSharp.fluid} />
                   <div className="author">
                     <img className="author_img" src={course.author.author_image[0].url} alt="" />
-                    <h3>author name</h3>
+                    <h3>{course.author.name}</h3>
                     </div>
                     <div className="para">
                       <p> {course.short_descrption}</p>
