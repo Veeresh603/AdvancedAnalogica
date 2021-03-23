@@ -50,7 +50,7 @@ const AccordionDetails = withStyles(theme => ({
 
 export default function CustomAccordion(props) {
   const { curriculum } = props
-  console.log(curriculum)
+  // console.log(curriculum)
   const [expanded, setExpanded] = React.useState("panel1")
 
   const handleChange = panel => (event, newExpanded) => {

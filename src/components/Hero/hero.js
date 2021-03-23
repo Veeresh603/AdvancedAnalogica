@@ -1,27 +1,28 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Image from "gatsby-image"
 
 function Hero(props) {
-  const {title} = props
-    const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "robot.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-    }
-  `)
+  const {title, banner} = props
+  // console.log(banner);
+  //   const data = useStaticQuery(graphql`
+  //   query {
+  //     file(relativePath: { eq: "robot.jpg" }) {
+  //       childImageSharp {
+  //         fluid(quality: 100) {
+  //           ...GatsbyImageSharpFluid
+  //           ...GatsbyImageSharpFluidLimitPresentationSize
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
     return (
         <Wrapper>
         <div className="banner">
         
-        <Img style={{width:"100%"}} fluid={data.file.childImageSharp.fluid} />
+        <Img style={{width:"100%"}} fluid={banner.childImageSharp.fluid} />
 
     </div> 
     <div className="banner_heading">
