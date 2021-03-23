@@ -8,11 +8,23 @@ import Img from "gatsby-image"
 
 function Artificialintelligence() {
   const data = useStaticQuery(query)
+ 
   // console.log(data.allStrapiCourse.nodes[0].short_descrption);
-    
+  const image = graphql`
+  query {
+    file(relativePath: { eq: "beach.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth:1000, maxHeight: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
     return (
         <Container>
             <div className="hero">
+              <Img className="image" fluid={data.allStrapiCourse.nodes[0].banner_img.childImageSharp.fluid} />
             </div>
        <div className="section">
             {data.allStrapiCourse.nodes.map((course, id) => {
@@ -20,7 +32,7 @@ function Artificialintelligence() {
                 <div key={course.id} className="box-wrapper">
                 <h4>{course.title}</h4>
                 <div  className="box_section">
-                  <Img className="image" fluid={course.course_image.childImageSharp.fluid} />
+                  <Img style={{objectFit: "contain"}} className="image" fluid={course.course_image.childImageSharp.fluid} />
                   <div className="author">
                     <img className="author_img" src={course.author.author_image[0].url} alt="" />
                     <h3>{course.author.name}</h3>
@@ -60,6 +72,13 @@ export const query = graphql`
             }
           }
         }
+        banner_img {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
         author {
           name
           author_image {
@@ -86,7 +105,12 @@ const Container = styled.div`
     flex-wrap: wrap;
     overflow: hidden;
   }
-
+  .image{
+    width:100%;
+    height:300px;
+    object-fit: contain;
+  
+  }
   .section{
     display: flex;
     width:90%;
@@ -98,7 +122,7 @@ const Container = styled.div`
   }
    .hero{
      width:100%;
-     height:200px;
+     height:300px;
      background-color: blue;
    }
   .box-wrapper{
@@ -120,11 +144,7 @@ const Container = styled.div`
   h4{
     color:black;
   }
-  .image{
-    width:100%;
-    height:173px;
-  
-  }
+ 
   .author{
     display:flex;
     flex-direction: row;
