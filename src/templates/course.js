@@ -7,13 +7,13 @@ import Hero from '../components/Hero/hero'
 import { graphql } from "gatsby";
 
 function Course({data}) {
-    const {title, overview, author, curriculum, course_image} = data.strapiCourse
+    const {title, overview, author, curriculum, course_image, id, slug} = data.strapiCourse
     
     return (
         <Wrapper>
          
         <Hero title={title} banner={course_image} />
-        <CourseTab title={title} overview={overview} curriculum={curriculum} author={author} />
+        <CourseTab title={title} overview={overview} curriculum={curriculum} author={author} id={id} slug={slug} />
         {/* <Overview data={data.strapiCourse.overview} /> */}
       
         </Wrapper>

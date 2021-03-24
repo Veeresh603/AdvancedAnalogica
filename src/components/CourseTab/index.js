@@ -11,6 +11,8 @@ import Curriculum from '../Curriculum/index'
 import Overview from '../Overview/overview'
 import styled from "styled-components"
 import Author from "../Author/author"
+import { DiscussionEmbed } from "disqus-react"
+
 
 
 function TabPanel(props) {
@@ -58,10 +60,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CourseTab(props) {
-  const {overview, curriculum, author} = props
+  const {overview, curriculum, author, title, id , slug} = props
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+ 
+  const disqusConfig = {
+    shortname:"analogica",
+    config:{identifier : id, slug , title,}
+     
+     
+  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -105,8 +114,8 @@ export default function CourseTab(props) {
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Author author={author} />
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-         Discussion
+        <TabPanel value={value} index={3} dir={theme.direction}>
+        <DiscussionEmbed {...disqusConfig} />
         </TabPanel>
       </SwipeableViews>
     </div>

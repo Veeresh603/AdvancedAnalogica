@@ -27,6 +27,13 @@ module.exports = {
     
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `ana-j1ocbvfhpi`
+      }
+  },
+
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://anastrapiatlas.herokuapp.com`,
