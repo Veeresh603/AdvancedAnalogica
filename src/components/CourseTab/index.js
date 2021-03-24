@@ -66,7 +66,7 @@ export default function CourseTab(props) {
   const [value, setValue] = React.useState(0);
  
   const disqusConfig = {
-    shortname:"analogica3",
+    shortname:"analogica",
     config:{identifier : id, slug , title,}
      
      
