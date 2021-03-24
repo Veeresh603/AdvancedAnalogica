@@ -11,7 +11,7 @@ import Curriculum from '../Curriculum/index'
 import Overview from '../Overview/overview'
 import styled from "styled-components"
 import Author from "../Author/author"
-import { DiscussionEmbed } from "disqus-react"
+import Disqus from 'gatsby-plugin-disqus'
 
 
 
@@ -64,13 +64,8 @@ export default function CourseTab(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
- 
-  const disqusConfig = {
-    shortname:"analogica",
-    config:{identifier : id, slug , title,}
-     
-     
-  }
+ const baseUrl = "analogica3.netlify.app/courses"
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -115,7 +110,11 @@ export default function CourseTab(props) {
           <Author author={author} />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-        <DiscussionEmbed {...disqusConfig} />
+        <Disqus 
+          identifier={id}
+           title={title}
+           url={`${baseUrl}${slug}`}
+    />
         </TabPanel>
       </SwipeableViews>
     </div>
