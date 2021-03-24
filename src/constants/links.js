@@ -4,15 +4,15 @@ export default [
     text : "home"
   },
   {
-    path: "/",
+    path: "/about",
     text: "about",
   },
   {
-    path: "/",
-    text: "Courses",
+    path: "/courses",
+    text: "courses",
   },
   {
-    path: "/",
+    path: "/contact",
     text: "contact",
   },
 ]

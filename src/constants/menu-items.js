@@ -12,7 +12,7 @@ export const mainMenuItems = [
     title: "about",
   },
   {
-    path: "/course",
+    path: "/courses",
     title: "courses",
   },
   {

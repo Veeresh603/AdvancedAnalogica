@@ -86,6 +86,8 @@ export default function CourseTab(props) {
           <Tab label="Overview" {...a11yProps(0)} />
           <Tab label="Curriculum" {...a11yProps(1)} />
           <Tab label="Instructor" {...a11yProps(2)} />
+          <Tab label="Discussion" {...a11yProps(3)} />
+
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -102,6 +104,9 @@ export default function CourseTab(props) {
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Author author={author} />
+        </TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction}>
+         Discussion
         </TabPanel>
       </SwipeableViews>
     </div>
@@ -142,5 +147,11 @@ const Wrapper = styled.div`
         }
         .PrivateTabIndicator-colorPrimary-3{
             background-color: #ffff;
+        }
+        .MuiTab-root{
+          font-weight:500;
         } 
+        .MuiTab-textColorPrimary{
+          color: #000000;
+        }
 `

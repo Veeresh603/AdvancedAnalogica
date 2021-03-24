@@ -9,22 +9,11 @@ import Img from "gatsby-image"
 function Artificialintelligence() {
   const data = useStaticQuery(query)
  
-  // console.log(data.allStrapiCourse.nodes[0].short_descrption);
-  const image = graphql`
-  query {
-    file(relativePath: { eq: "beach.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth:1000, maxHeight: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+
     return (
         <Container>
             <div className="hero">
-              <Img className="image" fluid={data.allStrapiCourse.nodes[0].banner_img.childImageSharp.fluid} />
+              <img className="image" src="https://res.cloudinary.com/dvnb8joxk/image/upload/e_blue:0/v1616562622/man_593333_f4ad36e33c.jpg" alt="banner" />
             </div>
        <div className="section">
             {data.allStrapiCourse.nodes.map((course, id) => {
@@ -67,7 +56,7 @@ export const query = graphql`
         slug
         course_image {
           childImageSharp {
-            fluid {
+            fluid(maxWidth:1000, maxHeight: 1000) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -108,7 +97,7 @@ const Container = styled.div`
   .image{
     width:100%;
     height:300px;
-    object-fit: contain;
+    object-fit: cover;
   
   }
   .section{
@@ -168,7 +157,7 @@ const Container = styled.div`
       font-size:15px;
     }
   }
-   }
+   
   
 `
 const LinkedTo = styled(Link)`
