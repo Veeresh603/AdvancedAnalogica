@@ -12,8 +12,8 @@ export const mainMenuItems = [
     title: "about",
   },
   {
-    path: "/courses",
-    title: "courses",
+    path: "/whatwedo",
+    title: "what we do",
   },
   {
     path: "/contact",

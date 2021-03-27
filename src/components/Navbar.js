@@ -58,12 +58,13 @@ export const NavStyles = styled.nav`
      /* padding-left: 2px; */
    }
   .masthead {
-    grid-area: 1/2/2/8;
+    grid-area: 1/2/2/6;
     z-index: 3;
     width: 100%;
     img {
       margin-left: 0px;
       width: 145px !important;
+      margin-top:9px;
       @media (min-width: 768px) {
         width: 100px;
       }
@@ -77,7 +78,7 @@ export const NavStyles = styled.nav`
     }
   }
   .nav-links {
-    grid-area:1/8/2/11;
+    grid-area:1/6/2/11;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +102,7 @@ export const NavStyles = styled.nav`
       font-weight: 400;
       margin-left: 0;
       padding: 0.75rem 0;
+      margin-top:-11px;
       a {
         text-decoration: none;
         text-transform: lowercase;
