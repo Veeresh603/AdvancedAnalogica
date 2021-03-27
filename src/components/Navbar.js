@@ -11,7 +11,7 @@ const Navbar = ({ Logo }) => {
   }
   return (
     <NavStyles>
-      <div className="masthead flex-container">
+      <div className="masthead">
         <img src={Logo} alt="Analogica Logo" />
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
@@ -47,14 +47,18 @@ export const NavStyles = styled.nav`
   left: 0;
   right: 0;
   padding-top:1rem;
-  padding-left: 7rem;
-    padding-right: 7rem;
-
+  /* padding-left: 7rem;
+    padding-right: 7rem; */
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    /* grid-template-rows: 70px; */
+    grid-column-gap: 5px;
   box-sizing: border-box;
    @media (max-width:991px){
-     padding-left: 2px;
+     /* padding-left: 2px; */
    }
   .masthead {
+    grid-area: 1/2/2/8;
     z-index: 3;
     width: 100%;
     img {
@@ -64,7 +68,7 @@ export const NavStyles = styled.nav`
         width: 100px;
       }
       @media (max-width:991px){
-        margin-left:30px;
+        /* margin-left:30px; */
 
       }
       @media (min-width: 1200px) {
@@ -73,6 +77,7 @@ export const NavStyles = styled.nav`
     }
   }
   .nav-links {
+    grid-area:1/8/2/11;
     display: flex;
     flex-direction: column;
     justify-content: center;

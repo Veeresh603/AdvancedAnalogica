@@ -56,7 +56,9 @@ const TypographyStyles = createGlobalStyle`
       line-height: 1.4;
     }
   }
-
+ul, li{
+  font-family:"Montserrat";
+}
   
 `
 export default TypographyStyles

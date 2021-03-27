@@ -19,7 +19,7 @@ export default () => (
     <WhatweDO />
     <Details />
     <Consulting />
-
+    {/* <LeftImageCard /> */}
     <SoftwareDevelopment />
     <Training />
     <OurWork />

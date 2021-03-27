@@ -1,34 +1,39 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-
 import { Link } from "gatsby"
 
-function Card(props) {
+function LeftImage(props) {
+ 
+ 
   return (
     <Wrapper>
-      <div className="section">
-        <div className="left_section">
-          <Image style={{ borderRadius: "5px" }} fluid={props.img} />
-        </div>
-        <div className="right_section">
-          <h2 className="borderLeftRight">{props.title}</h2>
-          <h4>{props.desc}</h4>
-          <ul>
-            {props.list.map(list => (
-              <li>
-                {list.title}
-              </li>
-            ))}
-          </ul>
-          <LinkTo to="#">Learn More</LinkTo>
-        </div>
+       <div className="section">
+      
+      <div className="right_section">
+      <h2 className="borderLeftRight">{props.title}</h2>
+        <h4>
+         {props.desc}
+        </h4>
+        <ul>
+            {props.list.map(l => <li key={l.id}>{l.title}</li>)}
+                
+           
+         
+        </ul>
+        <LinkTo to="#">Learn More</LinkTo>
       </div>
+      <div className="left_section">
+         
+         <Image style={{borderRadius:"5px"}} fluid={props.image} />
+         
+     </div>
+    </div>
     </Wrapper>
   )
 }
 
-export default Card
+export default LeftImage
 
 const Wrapper = styled.div`
   display: flex;
@@ -39,24 +44,25 @@ const Wrapper = styled.div`
   justify-content: center;
   margin-top: 100px;
   /* padding-bottom: 50px; */
-  @media (max-width: 767px) {
-    padding: 0px;
-    height: auto;
-    margin-top: -30px;
-  }
+  @media (max-width: 767px){
+    margin-top: 60px;
+
+      height:auto;
+    }
   .section {
     /* background-color: gray; */
     width: 80%;
-    height: auto;
+    height: 400px;
     display: flex;
-    flex-flow: row wrap;
-    @media (max-width: 991px) {
-      width: 90%;
+    @media (max-width:991px){
+       width: 90%;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 767px){
       flex-direction: column;
-      height: auto;
+      height:auto;
+      width:90%;
     }
+  
   }
   .left_section {
     position: relative;
@@ -65,26 +71,27 @@ const Wrapper = styled.div`
     height: 400px;
     /* background-color: blue; */
     flex-shrink: inherit;
-    @media (max-width: 767px) {
-      width: 90%;
-      height: 100px;
-      justify-content: center;
+    @media (max-width: 767px){
+      height:auto;
+      width:90%;
       align-self: center;
+      justify-content: center;
+      order:1;
     }
+  
   }
   .right_section {
     padding: 0 20px;
     display: flex;
     width: 50%;
-    height: 500px;
+    height: 400px;
     /* background-color: green; */
     flex-direction: column;
-    @media (max-width: 767px) {
-      width: 80%;
-      padding-top: 202px;
-      height: auto;
-      justify-content: center;
+    @media (max-width: 767px){
+      height:auto;
+      width:80%;
       align-self: center;
+      order: 2;
     }
     h2 {
       width: 100%;
@@ -128,23 +135,30 @@ const Wrapper = styled.div`
       font-weight: 400 !important;
       font-size: 20px;
       color: var(--black);
-      @media (max-width: 991px) {
-        font-size: 13px;
-      }
+      @media (max-width:991px){
+      font-size: 13px;
+    }
     }
 
     ul,
     li {
       list-style: none;
       padding-left: 0px;
-      margin-top: -16px;
-      padding: 20px 0;
+      margin-top: 16px;
     }
     h6 {
       font-family: var(--family);
       font-weight: 900 !important;
       color: #000000;
       font-size: 15px;
+    }
+    .classRoom_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    p{
+      color: gray;
     }
   }
 `
@@ -155,10 +169,10 @@ const Image = styled(Img)`
   width: 100%;
   /* z-index: 1; */
   height: 490px; // or whatever
-  @media (max-width: 767px) {
+  @media (max-width: 767px){
     width: 100%;
-    height: 300px;
-  }
+      height: 300px;
+    }
   // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
   & > img {
     object-fit: contain !important; // or whatever
@@ -168,13 +182,12 @@ const Image = styled(Img)`
 `
 
 const LinkTo = styled(Link)`
-  margin-top: 5px;
+    margin-top: 5px;
   padding: 18px 24px;
-  color: var(--primaryColor);
-  transform: translate3d(0px, -1px, 0px);
+  width:150px;
   background-color: #fff;
-  border: 1px solid var(--primaryColor);
-  width: 150px;
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
 
   border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease,
@@ -185,8 +198,12 @@ const LinkTo = styled(Link)`
     color: var(--primaryColor);
     transform: translate3d(0px, -1px, 0px);
 
-    background-color: var(--primaryColor);
-    color: #fff;
+     background-color: var(--primaryColor);
+  color: #fff;
     box-shadow: none;
+  }
+      @media (max-width: 479px) {
+  
+    order: 5;
   }
 `

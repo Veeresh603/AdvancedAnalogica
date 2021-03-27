@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "../Cards/index"
+import Card from "../RightImageCard/index"
 import { useStaticQuery, graphql } from "gatsby"
 
 const list = [
