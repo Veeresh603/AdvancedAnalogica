@@ -65,13 +65,20 @@ const Wrapper = styled.div`
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: 500px;
     grid-column-gap: 5px;
-    padding: 35px;
+    padding: 35px 0px;
+    @media (max-width:767px){
+      grid-template-rows: 500px 500px;
+      padding: 0px 0px;
+    }
   }
   .left_section {
     grid-area: 1/2/2/6;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width:767px){
+      grid-area: 1/2/2/11;
+    }
     h2 {
       font-size: 25px;
       font-weight: 600;
@@ -82,11 +89,14 @@ const Wrapper = styled.div`
     }
   }
   .right_section {
-    grid-area: 1/6/2/11;
+    grid-area: 1/7/2/11;
     display: flex;
     place-items: center;
     background-color: var(--primaryColor);
-    margin-left: 50px;
+    margin-left: 0;
+    @media (max-width:767px){
+      grid-area: 2/2/3/11;
+    }
   }
   .form-group {
     flex-direction: column;
@@ -96,13 +106,17 @@ const Wrapper = styled.div`
     height: 440px;
     border-radius: 8px;
 
-    margin: calc(50vh - 220px) auto;
     padding: 20px 30px;
     max-width: calc(100vw - 40px);
     background-color: transparent;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     position: relative;
+    @media (max-width:767px){
+      grid-area: 1/2/2/11;
+      margin: auto;
+
+    }
   }
   input,
   textarea {
