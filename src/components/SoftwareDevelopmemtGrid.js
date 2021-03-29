@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 const list = [
@@ -18,37 +17,35 @@ const list = [
   },
 ]
 
-function SoftwareDevelopmemtGrid() {
-    const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "beach.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth:1000, maxHeight: 1000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+function SoftwareDevelopmemtGrid(props) {
+  //   const data = useStaticQuery(graphql`
+  //   query {
+  //     file(relativePath: { eq: "beach.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth:1000, maxHeight: 1000) {
+  //           ...GatsbyImageSharpFluid_withWebp
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
     return (
         <Wrapper>
             <div className="whatwedo_Software">
                 <div className="right_image">
                 <Img
             style={{ borderRadius: "5px", objectFit: "contain" , height: "500px" }}
-            fluid={data.file.childImageSharp.fluid}
+            fluid={props.img}
           />
                 </div>
                 <div className="left_text">
                 <div>
-            <h2 className="borderLeftRight">software development</h2>
+            <h2 className="borderLeftRight">{props.title}</h2>
           </div>
           <div>
             {" "}
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit
-              in cras porta velit integer maecenas.
+              {props.desc}
             </p>
           </div>
           <div style={{marginBottom: "20px"}}>
@@ -60,7 +57,7 @@ function SoftwareDevelopmemtGrid() {
             </ul>
           </div>
           <div>
-            <Link className="link" to="">
+            <Link className="link" to={props.link}>
               Learn More
             </Link>
           </div>

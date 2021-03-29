@@ -62,13 +62,16 @@ export default Details
 
 const Wrapper = styled.div`
   margin-top: 100px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
   width: 100%;
   height:auto;
 
   .section{
+    grid-area: 1/2/2/11;
     width:100%;
     display: flex;
     flex-flow: row nowrap;
@@ -128,6 +131,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left:10px;
     /* padding-left: 25px; */
  
        @media (max-width: 991px){
@@ -153,14 +157,14 @@ const Wrapper = styled.div`
      h2{
        background-color: var(--primaryColor);
        color: white;
-       transition: 1s ease-in-out;
+       transition: 0.5s ease-in-out;
      }
   }
   .section_child01:hover{
      h2{
        background-color: var(--primaryColor);
        color: white;
-       transition: 1s ease-in-out;
+       transition: 0.5s ease-in-out;
      }
   }
   

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
 const list = [
@@ -19,38 +18,25 @@ const list = [
   },
 ]
 
-function ConsultingGrid() {
-    const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "books.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-    }
-  `)
+function ConsultingGrid(props) {
+
   return (
     <Wrapper>
       <div className="whatwedo_consulting">
         <div className="left_image">
           <Img
             style={{ borderRadius: "5px", objectFit: "contain" , height: "500px"}}
-            fluid={data.file.childImageSharp.fluid}
+            fluid={props.img}
           />
         </div>
         <div className="right_text">
           <div>
-            <h2 className="borderLeftRight">consulting</h2>
+            <h2 className="borderLeftRight">{props.title}</h2>
           </div>
           <div>
             {" "}
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit
-              in cras porta velit integer maecenas.
+             {props.desc}
             </p>
           </div>
           <div style={{marginBottom: "20px"}}>
@@ -62,7 +48,7 @@ function ConsultingGrid() {
             </ul>
           </div>
           <div>
-            <Link className="link" to="">
+            <Link className="link" to={props.link}>
               Learn More
             </Link>
           </div>
@@ -76,7 +62,7 @@ export default ConsultingGrid
 
 const Wrapper = styled.div`
   width: 100%;
-  margin-top:100px;
+  /* margin-top:100px; */
   .whatwedo_consulting {
     display: grid;
     grid-template-columns: repeat(11, 1fr);

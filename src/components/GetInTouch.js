@@ -131,6 +131,7 @@ const Wrapper = styled.div`
     transition: all 0.3s;
     border-bottom: 2px solid #bebed2;
     color: #fff;
+    font-weight:900;
   }
   input:focus {
     border-bottom: 2px solid #78788c;

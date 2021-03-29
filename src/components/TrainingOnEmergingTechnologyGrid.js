@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 const list = [
@@ -18,18 +17,8 @@ const list = [
     },
   ]
 
-function TrainingOnEmergingTechnologyGrid() {
-    const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "pexels.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, maxHeight: 1000) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+function TrainingOnEmergingTechnologyGrid(props) {
+  
   return (
     <Wrapper>
       <div className="trainingOn_whatwedo">
@@ -40,19 +29,17 @@ function TrainingOnEmergingTechnologyGrid() {
               objectFit: "contain",
               height: "500px",
             }}
-            fluid={data.file.childImageSharp.fluid}
+            fluid={props.img}
           />
         </div>
         <div className="right_text">
           <div>
-            <h2 className="borderLeftRight">consulting</h2>
+            <h2 className="borderLeftRight">{props.title}</h2>
           </div>
           <div>
             {" "}
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim
-              in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit
-              in cras porta velit integer maecenas.
+         {props.desc}
             </p>
           </div>
           <div className="row_wrapper" style={{marginBottom: "20px"}}>
@@ -80,7 +67,7 @@ function TrainingOnEmergingTechnologyGrid() {
           </div>
 
           <div>
-            <Link className="link" to="">
+            <Link className="link" to={props.link}>
               Learn More
             </Link>
           </div>

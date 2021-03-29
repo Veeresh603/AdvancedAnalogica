@@ -1,17 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 
-function Banner2() {
+function Banner2(props) {
   return (
     <Wrapper>
       <div className="parent">
         <div className="background"></div>
         <div className="title">
-          <h1>What we do</h1>
+          <h1>{props.title}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
-            cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
-            cras porta velit integer maecenas. .
+       {props.desc}
           </p>
         </div>
       </div>

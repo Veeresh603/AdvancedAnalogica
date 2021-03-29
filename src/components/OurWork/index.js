@@ -7,58 +7,59 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const data = [
-  {
-    id: 1,
-    img: "https://www.fillmurray.com/370/240",
-    h3: "Web Penetration Application",
-    h6:
-      "Web applications is the most used digital technology there is and with this",
-    link: "#",
-  },
-  {
-    id: 2,
-    img: "https://www.fillmurray.com/370/350",
-    h3: "Cloud Security Practitioner",
-    h6:
-      "Every organization is migrating to the cloud in order to save money, but",
-    link: "#",
-  },
-  {
-    id: 3,
-    img: "https://www.fillmurray.com/370/240",
-    h3: "Android Application Penetration Testing",
-    h6:
-      "We are always connected to our mobile phones, using lot’s of applications",
-    link: "#",
-  },
-  {
-    id: 4,
-    img: "https://www.fillmurray.com/370/350",
-    h3: "Ethical Hacking1.0",
-    h6:
-      "Ethical hacking also known as penetration testing/ cyber security is a practice of",
-    link: "#",
-  },
-  {
-    id: 5,
-    img: "https://www.fillmurray.com/370/240",
-    h3: "Diploma in Machine Learning",
-    h6:
-      "Web applications is the most used digital technology there is and with this",
-    link: "#",
-  },
-  {
-    id: 6,
-    img: "https://www.fillmurray.com/370/350",
-    h3: "Diploma in Cloud Security",
-    h6:
-      "The course module is divided into two semester covering both practical and theoretical",
-    link: "#",
-  },
-]
+// const data = [
+//   {
+//     id: 1,
+//     img: "https://www.fillmurray.com/370/240",
+//     h3: "Web Penetration Application",
+//     h6:
+//       "Web applications is the most used digital technology there is and with this",
+//     link: "#",
+//   },
+//   {
+//     id: 2,
+//     img: "https://www.fillmurray.com/370/350",
+//     h3: "Cloud Security Practitioner",
+//     h6:
+//       "Every organization is migrating to the cloud in order to save money, but",
+//     link: "#",
+//   },
+//   {
+//     id: 3,
+//     img: "https://www.fillmurray.com/370/240",
+//     h3: "Android Application Penetration Testing",
+//     h6:
+//       "We are always connected to our mobile phones, using lot’s of applications",
+//     link: "#",
+//   },
+//   {
+//     id: 4,
+//     img: "https://www.fillmurray.com/370/350",
+//     h3: "Ethical Hacking1.0",
+//     h6:
+//       "Ethical hacking also known as penetration testing/ cyber security is a practice of",
+//     link: "#",
+//   },
+//   {
+//     id: 5,
+//     img: "https://www.fillmurray.com/370/240",
+//     h3: "Diploma in Machine Learning",
+//     h6:
+//       "Web applications is the most used digital technology there is and with this",
+//     link: "#",
+//   },
+//   {
+//     id: 6,
+//     img: "https://www.fillmurray.com/370/350",
+//     h3: "Diploma in Cloud Security",
+//     h6:
+//       "The course module is divided into two semester covering both practical and theoretical",
+//     link: "#",
+//   },
+// ]
 
-function courseone() {
+function OurWork({data, title}) {
+  console.log(data.map(d => d.h3));
   var settings = {
     dots: true,
     infinite: true,
@@ -99,7 +100,10 @@ function courseone() {
 
   return (
     <Wrapper>
-      <h2 className="borderLeftRight">our work</h2>
+      <div className="heading">
+      <h2 className="borderLeftRight">{title}</h2>
+
+      </div>
       <Slider {...settings}>
         {data.map(d => {
           return (
@@ -116,10 +120,10 @@ function courseone() {
   )
 }
 
-export default courseone
+export default OurWork
 
 const Wrapper = styled.div`
-  margin-top: 200px;
+  /* margin-top:100px; */
   width: 90%;
   height: auto;
   padding: 40px;
@@ -127,7 +131,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-self: center;
   @media (max-width:479px){
-    margin:0px;
+    margin-top:-85px !important;
   }
   @media (max-width:767px){
     margin:0px;
@@ -168,12 +172,15 @@ const Wrapper = styled.div`
       height: auto;
     }
   }
+  .heading{
+    width:auto;
+  }
   h2 {
     color: var(--primaryColor);
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 25px;
-    width:124px;
+    width:auto;
   }
   .slick-slide img {
     margin: auto;
