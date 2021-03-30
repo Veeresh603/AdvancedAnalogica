@@ -38,7 +38,7 @@ module.exports = {
       options: {
         apiURL: `https://anastrapiatlas.herokuapp.com`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`author`, 'course'],
+        contentTypes: [`author`, 'course', 'ourwork', 'ourreviews', 'get-toknow-ourpeople'],
         //If using single types place them in this array.
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {

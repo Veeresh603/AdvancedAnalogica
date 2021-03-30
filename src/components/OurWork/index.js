@@ -58,8 +58,8 @@ import "slick-carousel/slick/slick-theme.css"
 //   },
 // ]
 
-function OurWork({data, title}) {
-  console.log(data.map(d => d.h3));
+function OurWork(props) {
+  const {data} = props
   var settings = {
     dots: true,
     infinite: true,
@@ -101,16 +101,16 @@ function OurWork({data, title}) {
   return (
     <Wrapper>
       <div className="heading">
-      <h2 className="borderLeftRight">{title}</h2>
+      <h2 className="borderLeftRight">{props.title}</h2>
 
       </div>
       <Slider {...settings}>
-        {data.map(d => {
+        {data.nodes.map(d => {
           return (
             <div className="first">
-              <img src={d.img} alt="" />
+              <img src={d.ourwork_image[0].url} alt="" />
               <div className="text">
-                <h4>{d.h3}</h4>
+                <h4>{d.title}</h4>
               </div>
             </div>
           )
@@ -144,7 +144,7 @@ const Wrapper = styled.div`
     h4 {
       background-color: var(--primaryColor);
       color: white;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
   }
   .text {

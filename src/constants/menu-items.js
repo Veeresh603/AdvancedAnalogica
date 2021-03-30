@@ -7,13 +7,18 @@ export const mainMenuItems = [
     path: "/",
     title: "home",
   },
-  {
-    path: "/about",
-    title: "about",
-  },
+ 
   {
     path: "/whatwedo",
     title: "what we do",
+  },
+  {
+    path: "/whoweare",
+    title: "who we are",
+  },
+  {
+    path: "/services",
+    title: "services",
   },
   {
     path: "/contact",

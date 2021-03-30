@@ -3,13 +3,18 @@ export default [
     path : "/",
     text : "home"
   },
-  {
-    path: "/about",
-    text: "about",
-  },
+ 
   {
     path: "/whatwedo",
     text: "what we do",
+  },
+  {
+    path: "/whoweare",
+    text: "who we are",
+  },
+  {
+    path: "/services",
+    text: "services",
   },
   {
     path: "/contact",

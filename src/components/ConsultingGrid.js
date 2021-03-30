@@ -3,20 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-const list = [
-  {
-    id: 1,
-    title: "Artificial Intelligence",
-  },
-  {
-    id: 2,
-    title: "Internet of things",
-  },
-  {
-    id: 3,
-    title: "Cyber Security & services",
-  },
-]
+
 
 function ConsultingGrid(props) {
 
@@ -39,13 +26,15 @@ function ConsultingGrid(props) {
              {props.desc}
             </p>
           </div>
+          
           <div style={{marginBottom: "20px"}}>
             {" "}
-            <ul>
-              {list.map(l => (
+            {!props.list ? null : <ul>
+              {props.list.map(l => (
                 <li key={l.id}>{l.title}</li>
               ))}
-            </ul>
+            </ul> }
+         
           </div>
           <div>
             <Link className="link" to={props.link}>

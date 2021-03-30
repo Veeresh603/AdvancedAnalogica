@@ -60,16 +60,16 @@ function Whatwedo() {
     return (
         <Container>
            <Banner2 title="what we do" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas. Pellentesque scelerisque at amet tempor donec in tincidunt. Vulputate platea semper lacinia aliquam egestas."  /> 
-           <AnchorTab style={{marginBottom: "100px"}} />
+           <AnchorTab link1="consulting" link2="software development"  link3="training"  style={{marginBottom: "100px"}} />
            <ConsultingGrid title="consulting" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
             cras porta velit integer maecenas." img={data.consulting.childImageSharp.fluid} list={list} />
            <SoftwareDevelopmemtGrid title="software development" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
-            cras porta velit integer maecenas." img={data.software.childImageSharp.fluid} />
-           <TrainingOnEmergingTechnologyGrid title="training on emerging technologies" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
+            cras porta velit integer maecenas." img={data.software.childImageSharp.fluid} list={list} />
+           <TrainingOnEmergingTechnologyGrid title="training on emerging technologies" classroom="classroom" corporate="corporate & online" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
-            cras porta velit integer maecenas." img={data.training.childImageSharp.fluid} />
+            cras porta velit integer maecenas." img={data.training.childImageSharp.fluid}  list={list}/>
            <GetInTouch />
         </Container>
     )

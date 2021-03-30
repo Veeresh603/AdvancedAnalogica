@@ -2,33 +2,10 @@ import React from 'react'
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-const list = [
-  {
-    id: 1,
-    title: "Artificial Intelligence",
-  },
-  {
-    id: 2,
-    title: "Internet of things",
-  },
-  {
-    id: 3,
-    title: "Cyber Security & services",
-  },
-]
+
 
 function SoftwareDevelopmemtGrid(props) {
-  //   const data = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: "beach.jpg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth:1000, maxHeight: 1000) {
-  //           ...GatsbyImageSharpFluid_withWebp
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+ 
     return (
         <Wrapper>
             <div className="whatwedo_Software">
@@ -48,13 +25,13 @@ function SoftwareDevelopmemtGrid(props) {
               {props.desc}
             </p>
           </div>
-          <div style={{marginBottom: "20px"}}>
+          <div style={{paddingBottom: "20px"}}>
             {" "}
-            <ul>
-              {list.map(l => (
+            {!props.list ? null : <ul>
+              {props.list.map(l => (
                 <li key={l.id}>{l.title}</li>
               ))}
-            </ul>
+            </ul> }
           </div>
           <div>
             <Link className="link" to={props.link}>
@@ -139,7 +116,7 @@ const Wrapper = styled.div`
     transform-origin: bottom left;
   }
   .link {
-    /* margin-top: 20px; */
+    margin-top: 20px;
     padding: 18px 24px;
     color: var(--primaryColor);
     transform: translate3d(0px, -1px, 0px);

@@ -2,20 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-const list = [
-    {
-      id: 1,
-      title: "Artificial Intelligence",
-    },
-    {
-      id: 2,
-      title: "Internet of things",
-    },
-    {
-      id: 3,
-      title: "Cyber Security & services",
-    },
-  ]
+
 
 function TrainingOnEmergingTechnologyGrid(props) {
   
@@ -45,23 +32,23 @@ function TrainingOnEmergingTechnologyGrid(props) {
           <div className="row_wrapper" style={{marginBottom: "20px"}}>
           
             <div className="classsrom">
-            <h4>classroom</h4>
+            <h4>{!props.classroom ? null : props.classroom}</h4>
               <div className="list_classroom">
-                <ul>
-                  {list.map(l => (
-                    <li key={l.id}>{l.title}</li>
-                  ))}
-                </ul>
+              {!props.list ? null : <ul>
+              {props.list.map(l => (
+                <li key={l.id}>{l.title}</li>
+              ))}
+            </ul> }
               </div>
             </div>
             <div className="corporate">
-            <h4>corporate & online</h4>
+            <h4>{!props.corporate ? null : props.corporate}</h4>
               <div className="list_corporate">
-                <ul>
-                  {list.map(l => (
-                    <li key={l.id}>{l.title}</li>
-                  ))}
-                </ul>
+              {!props.list ? null : <ul>
+              {props.list.map(l => (
+                <li key={l.id}>{l.title}</li>
+              ))}
+            </ul> }
               </div>
             </div>
           </div>

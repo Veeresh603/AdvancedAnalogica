@@ -2,18 +2,18 @@ import React from "react"
 import { Link } from "react-scroll"
 import styled from "styled-components"
 
-function AnchorTab() {
+function AnchorTab(props) {
   return (
     <Wrapper>
       <div className="anchor_tab">
          <div className="anchor_tab_section">
              <div>
-             <Link className="link" to="">Training</Link>
+             <Link className="link" to="">{props.link1}</Link>
              </div>
              <div>
-             <Link to="" className="link" >Software Development</Link>
+             <Link to="" className="link" >{props.link2}</Link>
              </div> <div>
-             <Link to="" className="link" >Consulting</Link>
+             <Link to="" className="link" >{props.link3}</Link>
              </div>
           
 
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   height: 70px;
   margin-top:-30px;
   z-index:1;
-
+  padding-bottom: 150px;
   .anchor_tab {
     display: grid;
     grid-template-columns: repeat(11, 1fr);

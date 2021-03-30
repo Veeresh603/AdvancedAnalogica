@@ -78,7 +78,7 @@ export const NavStyles = styled.nav`
     }
   }
   .nav-links {
-    grid-area:1/6/2/11;
+    grid-area:1/5/2/12;
     display: flex;
     flex-direction: column;
     justify-content: center;
