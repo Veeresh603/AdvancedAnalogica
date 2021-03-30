@@ -29,9 +29,7 @@ function TrainingOnEmergingTechnologyGrid(props) {
          {props.desc}
             </p>
           </div>
-          
-        </div>
-        <div className="row_wrapper" style={{marginBottom: "20px"}}>
+          <div className="row_wrapper" style={{marginBottom: "20px"}}>
           
             <div className="classsrom">
             <h4>{!props.classroom ? null : props.classroom}</h4>
@@ -53,15 +51,14 @@ function TrainingOnEmergingTechnologyGrid(props) {
             </ul> }
               </div>
             </div>
-            <div>
-          
           </div>
-          <Link className="link" to={props.link}>
+
+          <div>
+            <Link className="link" to={props.link}>
               Learn More
             </Link>
           </div>
-
-          
+        </div>
       </div>
     </Wrapper>
   )
@@ -71,13 +68,16 @@ export default TrainingOnEmergingTechnologyGrid
 
 const Wrapper = styled.div`
   width: 100%;
-  /* margin-top: 100px; */
-  
+  margin-top: 100px;
+  @media (max-width:479px){
+       margin: 0px;
+    }
   .trainingOn_whatwedo {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: auto !important;
     grid-gap: 0px;
+
     @media (max-width: 767px) {
       grid-template-rows: auto !important;
       grid-template-rows: 1fr 1fr 1fr;
@@ -173,7 +173,7 @@ const Wrapper = styled.div`
     font-weight: 400;
   }
   .row_wrapper{
-    grid-area:3/2/4/11;
+    
       display: flex;
       flex-direction: row;
 
