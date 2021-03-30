@@ -131,7 +131,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-self: center;
   @media (max-width:479px){
-    margin-top:-85px !important;
+    /* margin-top:-85px !important; */
   }
   @media (max-width:767px){
     margin:0px;
