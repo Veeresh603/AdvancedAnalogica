@@ -5,6 +5,7 @@ import BuildAbetterFuture from "../components/BuildAbetterFuture"
 import OurApproach from "../components/OurApproach"
 import OurWork from "../components/OurWork"
 import SomeSection from "../components/SomeSection"
+import {graphql} from "gatsby"
 
 
 function whoweare({data}) {

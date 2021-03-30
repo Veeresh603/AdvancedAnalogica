@@ -12,7 +12,7 @@ const Navbar = ({ Logo }) => {
   return (
     <NavStyles>
       <div className="masthead">
-        <img src={Logo} alt="Analogica Logo" />
+        <Link to="/"><img src={Logo} alt="Analogica Logo" /></Link>
         <button
           className={isOpen ? "toggle-btn toggle-btn-active" : "toggle-btn"}
           type="button"
@@ -78,7 +78,7 @@ export const NavStyles = styled.nav`
     }
   }
   .nav-links {
-    grid-area:1/5/2/12;
+    grid-area:1/5/2/11;
     display: flex;
     flex-direction: column;
     justify-content: center;
