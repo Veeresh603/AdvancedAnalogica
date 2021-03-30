@@ -101,7 +101,7 @@ const Wrapper = styled.div`
       grid-area: 2/2/2/11;
     }
     @media (max-width:479px){
-        margin-top:-63px;
+        /* margin-top:-63px; */
     }
   }
   h2 {
