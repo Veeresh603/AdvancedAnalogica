@@ -8,7 +8,7 @@ function TrainingOnEmergingTechnologyGrid(props) {
   
   return (
     <Wrapper>
-      <div className="trainingOn_whatwedo">
+      <div id={!props.id ? null : props.id} className="trainingOn_whatwedo">
         <div className="left_image">
           <Img
             style={{

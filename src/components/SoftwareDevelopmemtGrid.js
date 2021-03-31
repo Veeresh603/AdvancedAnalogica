@@ -8,7 +8,7 @@ function SoftwareDevelopmemtGrid(props) {
  
     return (
         <Wrapper>
-            <div className="whatwedo_Software">
+            <div id={!props.id ? null : props.id} className="whatwedo_Software">
                 <div className="right_image">
                 <Img
             style={{ borderRadius: "5px", objectFit: "contain" , height: "500px" }}

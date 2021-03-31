@@ -60,6 +60,27 @@ function Index() {
           }
         }
       }
+      imageOne: file(relativePath: { eq: "softwares.jpg" }) {
+        childImageSharp { 
+          fluid(maxWidth : 1000, maxHeight: 1000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      imageTwo: file(relativePath: { eq: "trainings.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth : 1000, maxHeight: 1000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      imageThree: file(relativePath: { eq: "consulting.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth : 1000, maxHeight: 1000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       allStrapiOurwork {
         nodes {
           title
@@ -74,7 +95,7 @@ function Index() {
     <Container>
       <Banner />
       <WhatweDO />
-      <Details />
+      <Details title1="consulting" title2="software development" title3="training" image1={data.imageOne.childImageSharp.fluid} image2={data.imageTwo.childImageSharp.fluid} image3={data.imageThree.childImageSharp.fluid} />
       <ConsultingGrid
         list={list}
         title="consulting"

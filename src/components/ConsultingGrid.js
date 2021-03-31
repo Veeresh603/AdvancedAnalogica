@@ -9,7 +9,7 @@ function ConsultingGrid(props) {
 
   return (
     <Wrapper>
-      <div className="whatwedo_consulting">
+      <div id={!props.id ? null : props.id} className="whatwedo_consulting">
         <div className="left_image">
           <Img
             style={{ borderRadius: "5px", objectFit: "contain" , height: "500px"}}

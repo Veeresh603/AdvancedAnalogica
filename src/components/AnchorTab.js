@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 import styled from "styled-components"
-
+import scrollTo from 'gatsby-plugin-smoothscroll';
 function AnchorTab(props) {
   return (
     <Wrapper>
