@@ -20,7 +20,7 @@ function GetInTouch() {
             method="POST"
           >
             <div className="form-group">
-              Name :<input type="text" placeholder="name" className="form-control" />
+              <input type="text" placeholder="name" className="form-control" />
               <input
                 type="email"
                 placeholder="email"

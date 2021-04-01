@@ -35,12 +35,21 @@ function Services() {
           }
         }
       }
+      services: file(relativePath: { eq: "softwares.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
     }
   `)
   return (
     <Container>
       <Banner2
-        title=""
+      img={data.services.childImageSharp.fluid}
+        title="services"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas. ."
       />
       <Wrapper>

@@ -32,7 +32,7 @@ function WhoWeAre() {
             </p>
           </div>
           <div className="button">
-            <LinkedTo to="">Get to know us</LinkedTo>
+            <LinkedTo to="/whoweare">Get to know us</LinkedTo>
           </div>
         </div>
         <div className="section_left">

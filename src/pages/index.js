@@ -103,6 +103,7 @@ function Index() {
             cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in
             cras porta velit integer maecenas."
         img={data.consulting.childImageSharp.fluid}
+        link="/consulting"
       />
       <SoftwareDevelopmemtGrid
         title="software development"
@@ -111,6 +112,7 @@ function Index() {
             cras porta velit integer maecenas."
         img={data.software.childImageSharp.fluid}
         list={list}
+        link="softwaredevelopment"
       />
       <TrainingOnEmergingTechnologyGrid
         title="training on emerging technologies"
@@ -120,6 +122,7 @@ function Index() {
         img={data.training.childImageSharp.fluid}
         classroom="classroom" corporate="corporate & online"
         list={list}
+        link="training"
       />
       <OurWork title="our work" data={data.allStrapiOurwork}/>
       <TechnologyStack />

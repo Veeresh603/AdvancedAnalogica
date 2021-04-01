@@ -42,6 +42,14 @@ function Training() {
           }
         }
       }
+      training: file(relativePath: { eq: "arrow.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
       allStrapiOurreviews {
         nodes {
           ourwork_image {
@@ -55,6 +63,7 @@ function Training() {
   return (
     <Container>
       <Banner2
+        img={data.training.childImageSharp.fluid}
         title="training"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas. ."
       />

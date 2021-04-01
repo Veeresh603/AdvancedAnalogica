@@ -91,6 +91,7 @@ const Wrapper = styled.div`
       padding: 10px 10px;
       letter-spacing: 2px;
       margin-top: -50px;
+      color:#fff;
       @media (max-width: 479px) {
         font-size: 12px;
         margin-top: -30px;

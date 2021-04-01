@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-
+import Image from "gatsby-image"
 function Banner2(props) {
   return (
     <Wrapper>
       <div className="parent">
-        <div className="background"></div>
+        <div className="background">
+          <Image style={{maxWidth: "100% !important", height:"600px", opacity:"0.5"}}fluid={props.img} />
+        </div>
         <div className="title">
           <h1>{props.title}</h1>
           <p>
@@ -22,7 +24,7 @@ export default Banner2
 const Wrapper = styled.div`
   width: 100%;
   .parent {
-    position: relative;
+    /* position: relative; */
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: 1fr;
@@ -36,7 +38,8 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
+    z-index:1;
+    color:#fff;
     @media (max-width:991px){
       grid-area: 1/2/2/7;
 
@@ -52,7 +55,10 @@ const Wrapper = styled.div`
   }
  
   .background {
-    background-color: #c4c4c4;
-    grid-area: 1/1/2/12;
+    position: absolute;
+    background-color: #111111;
+    width:100%;
+    height:600px;
+    /* opacity: 0.8; */
   }
 `

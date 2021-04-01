@@ -14,7 +14,7 @@ function WhatweDO() {
           porta velit integer maecenas. 
         </h4>
         </Fade>
-        <LinkTo className="pushUpBtn" to="#">Learn More</LinkTo>
+        <LinkTo className="pushUpBtn" to="/whatwedo">Learn More</LinkTo>
       </InnerConatiner>
     </Container>
   )
