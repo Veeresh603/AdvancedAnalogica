@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 function Banner2(props) {
   return (
-    <Wrapper>
+    <Wrapper style={!props.style ? null : props.style}>
       <div className="parent">
         <div className="background">
           <Image style={{maxWidth: "100% !important", height:"600px", opacity:"0.5"}}fluid={props.img} />

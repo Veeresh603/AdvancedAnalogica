@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Banner2 from "../components/Banner2"
-
+import ConsultingG from "../components/ConsultingGrid"
 import SoftwareDevelopmemtGrid from "../components/SoftwareDevelopmemtGrid"
 import TrainingOnEmergingTechnologyGrid from "../components/TrainingOnEmergingTechnologyGrid"
 import GetInTouch from "../components/GetInTouch"
@@ -31,10 +31,12 @@ function Consulting() {
   return (
     <Container>
       <Banner2
+      style={{paddingBottom: "100px"}}
+
         title="Consulting"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas. ."
       />
-      <TrainingOnEmergingTechnologyGrid
+      <ConsultingG
         title="artificial intelligence"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas."
         img={data.consulting.childImageSharp.fluid}

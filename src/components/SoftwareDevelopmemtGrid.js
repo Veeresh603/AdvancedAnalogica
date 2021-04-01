@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 function SoftwareDevelopmemtGrid(props) {
  
     return (
-        <Wrapper>
+        <Wrapper style={!props.style ? null : props.style}>
             <div id={!props.id ? null : props.id} className="whatwedo_Software">
                 <div className="right_image">
                 <Img

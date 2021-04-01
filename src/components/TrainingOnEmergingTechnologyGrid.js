@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 function TrainingOnEmergingTechnologyGrid(props) {
   
   return (
-    <Wrapper>
+    <Wrapper style={!props.style ? null : props.style}>
       <div id={!props.id ? null : props.id} className="trainingOn_whatwedo">
         <div className="left_image">
           <Img

@@ -30,6 +30,8 @@ function Softwaredevelopment() {
   return (
     <Container>
       <Banner2
+            style={{paddingBottom: "100px"}}
+
         title="Software Development"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas. ."
       />
@@ -40,6 +42,8 @@ function Softwaredevelopment() {
       />
 
       <SoftwareDevelopmemtGrid
+                  style={{marginTop: "100px"}}
+
         title="web development"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et enim in cursus nec nunc diam mi id odio. Amet morbi amet velit ut. Sit in cras porta velit integer maecenas."
         img={data.software.childImageSharp.fluid}
